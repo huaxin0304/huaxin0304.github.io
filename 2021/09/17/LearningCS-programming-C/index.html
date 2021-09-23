@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Aidan">
+    
+    <title>
+        
+            C 语言基本语法 |
+        
+        栖迟於一丘
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/GitHub.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"huaxin0304.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/GitHub.jpg","favicon":"/images/GitHub.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/background.jpg","description":"栖迟於一丘，则天下不易其乐"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                栖迟於一丘
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">C 语言基本语法</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/GitHub.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Aidan</span>
+                        
+                            <span class="author-label">努力的小白</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-09-17 17:26:24
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>15 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+<p>当时准备 PAT 竞赛的时候临时准备的基础语法，因为这种计算机能力的考试多是使用 C/C++ 来参赛，所以 C 的学习还是有必要的，况且后续许多语言的基本语法也都大同小异，毕竟语言只是工具<br />
+当时看的视频是浙大翁恺，讲的非常好，这里只是简单的笔记，做个记录</p>
+<span id="more"></span>
+<h2 id="简单运算"><a class="markdownIt-Anchor" href="# 简单运算"></a> 简单运算</h2>
+<h3 id="变量"><a class="markdownIt-Anchor" href="# 变量"></a> 变量</h3>
+<ul>
+<li>变量是保存数据的地方；</li>
+<li>定义形式：&lt; 类型名称 &gt;&lt; 变量名称 &gt;;</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> price; </span><br><span class="line"><span class="keyword">int</span> amount; </span><br><span class="line"><span class="keyword">int</span> price, amount; </span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中变量的名字叫做标识符，是由字母数字下划线组成（数字不能放在开头），关键字不能做标识符<br />
+int 型数据的范围是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><msup><mn>2</mn><mn>31</mn></msup></mrow><annotation encoding="application/x-tex">-2^{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{31}-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 之间，可记为绝对值小于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span><br />
+long long 型数据记录超过 int 型数据时后面要加上 LL：long long bignum=1234567894567LL;<br />
+在整形数据前加上 unsigned 表示无符号型（即全是正数）</li>
+</ul>
+<h3 id="赋值"><a class="markdownIt-Anchor" href="# 赋值"></a> 赋值</h3>
+<ul>
+<li>“=” 作为赋值符号（作为动作是动态的），程序中的相等为 “==”（作为关系是静态的）</li>
+<li>C 语言不要求所有的变量必须被初始化，但是在第一次参与运算之前必须进行初始化（赋值）</li>
+<li>初始化形式：&lt; 类型名称 &gt;&lt; 变量名称 &gt; = &lt; 初始值 &gt;;<br />
+C99 允许在任何地方进行变量的定义</li>
+</ul>
+<h3 id="常量"><a class="markdownIt-Anchor" href="# 常量"></a> 常量</h3>
+<p>直接在程序中写的常数称为直接量，而将常数普遍定义为常量，这样做的好处是更容易理解常量数字存在的意义、便于修改<br />
+常量的定义：const int AMOUNT=100;<br />
+const 必须赋初值，表示这个变量不能作修改，若要用户对常量进行输入，需要用一个变量进行中间转换</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> b; </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;b); </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a = b; </span><br></pre></td></tr></table></figure>
+<h3 id="浮点数"><a class="markdownIt-Anchor" href="# 浮点数"></a> 浮点数</h3>
+<p>浮点型数据中 double 的精度要比 float 高，统一使用 double 即可</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> d; </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;d); <span class="comment">// 输入时使用 %lf 声明类型</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%f\n&quot;</span>, d); <span class="comment">// 输出用 %f 即可，默认小数点后六位</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.2f\n&quot;</span>, d); <span class="comment">// 使用 %.nf 表示输出小数点后 n 位</span></span><br></pre></td></tr></table></figure>
+<p>浮点数和整数放到一起运算时，C 会将整数转换为浮点，然后进行浮点数的运算</p>
+<h3 id="字符型"><a class="markdownIt-Anchor" href="# 字符型"></a> 字符型</h3>
+<p>char 型字符统一使用 ASCII 码进行存储<br />
+可以使用 char=getchar(); 的方式进行字符输入</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c; </span><br><span class="line">c = getchar(); </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>, c); </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, c); <span class="comment">// 通过输出整型的方式，输出字符的 ASCII 码</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串"><a class="markdownIt-Anchor" href="# 字符串"></a> 字符串</h3>
+<p>字符数组的读入无需取址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[<span class="number">12</span>], ch[<span class="number">12</span>]; </span><br><span class="line">gets(c); <span class="comment">// 字符串读入，回车结束</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, ch); <span class="comment">// 字符串读入，空格结束</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s\n%s\n&quot;</span>, c, ch); </span><br></pre></td></tr></table></figure>
+<p>转义字符：’\0’ 代表的是空字符 NULL，ASCII 码值为 0，不是空格的意思</p>
+<h3 id="运算符"><a class="markdownIt-Anchor" href="# 运算符"></a> 运算符</h3>
+<p>运算表达式由算子和运算符组成<br />
+其中算子就是变量、常量和常数；运算符为：+、-、*、/、%<br />
+运算符的优先级：正负级→乘除 / 取余→加减→赋值运算符</p>
+<h3 id="复合赋值"><a class="markdownIt-Anchor" href="# 复合赋值"></a> 复合赋值</h3>
+<p>将算数运算符和赋值运算符合并使用：total += 5; == total=total+5;<br />
+++ 和 – 放到变量的前或后进行增减赋值</p>
+<h2 id="判断"><a class="markdownIt-Anchor" href="# 判断"></a> 判断</h2>
+<h3 id="关系运算符"><a class="markdownIt-Anchor" href="# 关系运算符"></a> 关系运算符</h3>
+<p>计算两个值之间的关系叫做关系运算，使用的运算符号叫做关系运算符<br />
+关系运算符的优先级要低于算术运算符，但是高于赋值运算符</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">2</span> &gt; <span class="number">0</span>; </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a); <span class="comment">// a 的值为 1，说明先判断的 2&gt;0</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">7</span> &gt;= <span class="number">3</span> + <span class="number">4</span>); <span class="comment">// 输出结果为 1，说明先计算的 3+4</span></span><br><span class="line"><span class="comment">// &quot;==&quot; 和 &quot;！=&quot; 的优先级低于其他的关系运算符</span></span><br></pre></td></tr></table></figure>
+<h3 id="if"><a class="markdownIt-Anchor" href="#if"></a> if</h3>
+<p>Form：</p>
+<pre><code>if（表达式）&#123;
+语句；
+&#125;else if（表达式）&#123;
+……
+&#125;
+</code></pre>
+<p>Tips：在所有的 if…else 后跟上大括号，便于嵌套判断的读写<br />
+级联 if…else if 用于分支判断，再多分支程序中，尽量使用单一出口</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单一出口示例</span></span><br><span class="line"><span class="keyword">int</span> x, f; </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x); </span><br><span class="line"><span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    f = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (x == <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    f = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (x &gt; <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    f = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, f); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 多出口示例</span></span><br><span class="line"><span class="keyword">int</span> x; </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x); </span><br><span class="line"><span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>); </span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (x == <span class="number">0</span>)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>); </span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (x &gt; <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    f = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;1&quot;</span>); </span><br></pre></td></tr></table></figure>
+<h3 id="switch"><a class="markdownIt-Anchor" href="#switch"></a> switch</h3>
+<p>Form：<br />
+switch（表达式）{<br />
+case 常量：<br />
+语句；<br />
+break；<br />
+defaul：<br />
+语句；<br />
+……<br />
+}<br />
+switch 语句的表达式必须是整型的，可以是常数，也可以是常数计算的表达式：case 1+1: == case 2:<br />
+在 C99 中可以使用常量名进行分支选择的判断：<br />
+如我们预先定义 const int MAX=1; ，那么 case MAX:== case 1:<br />
+case 只是分支的开始，switch 并不是对计算进行分割，如果 case 中语句完成后没有 break，那么之后的 case 还将继续执行</p>
+<h2 id="循环"><a class="markdownIt-Anchor" href="# 循环"></a> 循环</h2>
+<p>循环有 while 循环、do…while 循环、for 循环</p>
+<h3 id="dowhile"><a class="markdownIt-Anchor" href="#dowhile"></a> (do)while</h3>
+<p>Form：<br />
+while（循环条件）{<br />
+&lt; 循环体语句 &gt;;<br />
+}<br />
+do{<br />
+&lt; 循环体语句 &gt;;<br />
+}while（循环条件）;<br />
+区别： do…while 循环是先进入循环再判断条件，至少会循环一次；<br />
+while 循环是先判断条件再进入循环</p>
+<h4 id="log- 计算"><a class="markdownIt-Anchor" href="#log- 计算"></a> Log 计算</h4>
+<p>输入对数和底数，求出指数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> d, x, count = <span class="number">0</span>; <span class="comment">// 定义底数，对数，和指数的初始值</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;d, &amp;x);</span><br><span class="line"><span class="keyword">int</span> t = x; <span class="comment">// 将对数保留，方便后续输出（计算过程中会更改）</span></span><br><span class="line"><span class="keyword">while</span> (x &gt; <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    x /= d;</span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d log of %d is %d&quot;</span>, t, d, count); </span><br></pre></td></tr></table></figure>
+<h3 id="循环读入"><a class="markdownIt-Anchor" href="# 循环读入"></a> 循环读入</h3>
+<p>while… EOF 格式进行数据的循环输入，也就是说当输入的值不是 EOF 时，一直进行文件的读入</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n) != EOF)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* code */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="c- 的随机数"><a class="markdownIt-Anchor" href="#c- 的随机数"></a> C 的随机数</h3>
+<p>头文件导入：#include &lt;stdlib.h&gt;; #include &lt;time.h&gt;<br />
+语句实现：srand(time(0)); int number = rand() % 100 + 1;<br />
+for 循环<br />
+Form：<br />
+for（循环初始条件；循环继续条件；每轮变化操作）{<br />
+&lt; 循环体语句 &gt;;<br />
+}<br />
+变化操作必须对条件赋值：可以写成 i+=2 或者 i++ 但不能写成 i+2<br />
+直接在 for 循环中定义条件只有在 C99 才能进行<br />
+循环的控制</p>
+<ul>
+<li>break： 跳出当前循环</li>
+<li>continue： 跳过这一轮循环剩下的语句进入下一轮循环<br />
+嵌套循环的跳出操作：</li>
+</ul>
+<ol>
+<li>break 接力：设置一个变量，当第一次 break 的时候将变量设置为 true，在更外一层的循环中判断变量的值决定是否继续跳出</li>
+<li>goto：使用 goto 语句指向出口，运行到 goto 语句后直接跳出到循环外的出口但是这种方式易破坏程序的结构性，尽量只在多重循环嵌套中使用</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">2</span>; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot; 第一次循环 &quot;</span>);</span><br><span class="line">                <span class="keyword">goto</span> out;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">out: </span><br></pre></td></tr></table></figure>
+<h2 id="数据类型"><a class="markdownIt-Anchor" href="# 数据类型"></a> 数据类型</h2>
+<p>C99 提供了 long long; long double; bool<br />
+sizeof() 加上变量名可以表现当前变量在内存中占用几个字节<br />
+二进制中负数的存储是使用补码的形式：-a 存储为 0-a，实际上是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">2^n-a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>，其中 n 是是这种类型的位数</p>
+<h3 id="8- 进制和 -16- 进制"><a class="markdownIt-Anchor" href="#8- 进制和 -16- 进制"></a> 8 进制和 16 进制</h3>
+<p>8 进制在 C 语言中用 0 开头，16 进制用 0x 开头</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">012</span>, b = <span class="number">0x12</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, a, b);<span class="comment">// 输出为 12 和 18</span></span><br></pre></td></tr></table></figure>
+<h3 id="浮点数 -2"><a class="markdownIt-Anchor" href="# 浮点数 -2"></a> 浮点数</h3>
+<p>科学计数法输出：%e 或 %E</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> f = <span class="number">1234.5678</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%e %f&quot;</span>, f, f);</span><br></pre></td></tr></table></figure>
+<p>浮点型也可以用科学计数法进行存储 double f = 1E-10;<br />
+char 型： char 型既可以作为字符也可以作为整数，但尽量只作为字符使用，字符可配合 ASCII 码使用</p>
+<h3 id="类型转换"><a class="markdownIt-Anchor" href="# 类型转换"></a> 类型转换</h3>
+<h4 id="自动转换"><a class="markdownIt-Anchor" href="# 自动转换"></a> 自动转换</h4>
+<p>当运算符两边字符不同会自动转换为较大范围的字符；如整数和浮点一起运算时，整数转换为浮点数</p>
+<ul>
+<li>char → short → int → long</li>
+<li>int → float → double<br />
+输入输出时的转换：</li>
+<li>在进行 printf 时，小于 int 的整型会自动转为 int 型 (%d) 来进行输出，float 也会转换为 double 型进行输出</li>
+<li>在 scanf 时，则必须对类型指示正确，如 short 型整数，必须写成 scanf(&quot;%hd&quot;, &amp;n);</li>
+</ul>
+<h4 id="强制转换"><a class="markdownIt-Anchor" href="# 强制转换"></a> 强制转换</h4>
+<p>一般是将一个较大范围的字符转换为较小范围<br />
+Form：（类型）值 n=(int)10.2; 强制类型转换的优先级比运算要高</p>
+<h3 id="bool- 型"><a class="markdownIt-Anchor" href="#bool- 型"></a> bool 型</h3>
+<p>包含在头文件 &lt;stdbool.h&gt;，0 为 false，非零为 true<br />
+printf 只能输出 1 或者 0，并没有对 true 或 false 的逻辑类型输出</p>
+<h3 id="逻辑运算符"><a class="markdownIt-Anchor" href="# 逻辑运算符"></a> 逻辑运算符</h3>
+<p>短路： 逻辑运算的 &quot;&amp;&amp;&quot;、&quot;||&quot; 是自左向右的，也就是当左边成立，如 &amp;&amp; 运算时左边已经为 false，那左边就不会运算<br />
+三目运算<br />
+Form：flag ? true : false</p>
+<h3 id="逗号运算"><a class="markdownIt-Anchor" href="# 逗号运算"></a> 逗号运算</h3>
+<p>在 for 循环用作多条件的分割<br />
+赋值中会直接返回逗号之后的结果</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = (<span class="number">3</span> + <span class="number">4</span>, <span class="number">5</span> + <span class="number">6</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a); <span class="comment">// 值为 11，直接显示 5+6 的值</span></span><br><span class="line"><span class="keyword">int</span> i, j;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, j = <span class="number">1</span>; i - j &lt; <span class="number">10</span>; i++, j--) <span class="comment">// 分割两个条件并行使用</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="函数"><a class="markdownIt-Anchor" href="# 函数"></a> 函数</h2>
+<h3 id="函数的定义"><a class="markdownIt-Anchor" href="# 函数的定义"></a> 函数的定义</h3>
+<p>当函数的参数是数组时，无需定义长度，二维数组需要对第二维定义长度，但这里的数组在函数中的变化就是数组本身的变化，而不是局部变量</p>
+<h3 id="函数的调用"><a class="markdownIt-Anchor" href="# 函数的调用"></a> 函数的调用</h3>
+<p>调用 Form：函数名（参数表）; 用以获取相应参数生成的函数返回值或者使全局变量发生改变<br />
+没有参数也要加上 &quot;()&quot;，否则便没法进行调用<br />
+没有返回值的函数使用 void 型进行定义</p>
+<h3 id="函数的先后关系"><a class="markdownIt-Anchor" href="# 函数的先后关系"></a> 函数的先后关系</h3>
+<p>C 语言中的编译时自上而下的，所以需要在 main 方法中调用的函数没有定义在 main 之前则会编译报错<br />
+<strong>解决：</strong> 可以将函数头声明在开头，但不进行函数体的定义，在 main 之后进行函数体的定义，声明和定义的函数头必须一致，但是在声明中可以不定义参数名，仅声明参数的数据类型</p>
+<h3 id="参数的传递"><a class="markdownIt-Anchor" href="# 参数的传递"></a> 参数的传递</h3>
+<p>参数传递的时候如果类型不一致会进行自动类型转换<br />
+调用函数是的参数如果是变量，那么函数接收到的仅仅是变量存储的值，而不是变量本身，所以没办法写出一个真正的 swap() 函数（可以用指针）</p>
+<h2 id="数组"><a class="markdownIt-Anchor" href="# 数组"></a> 数组</h2>
+<h3 id="数组的定义"><a class="markdownIt-Anchor" href="# 数组的定义"></a> 数组的定义</h3>
+<p>Form:&lt; 类型 &gt; 变量名称 [元素数量];</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> grades[<span class="number">100</span>]; </span><br><span class="line"><span class="keyword">double</span> weight[<span class="number">20</span>]; </span><br></pre></td></tr></table></figure>
+<p>数组范围都是从 0 开始，如大小为 100 的数组，那么下标为 0~99；<br />
+数组越界在 C 语言的编译器中是不会进行检查的</p>
+<h3 id="数组的初始化"><a class="markdownIt-Anchor" href="# 数组的初始化"></a> 数组的初始化</h3>
+<p>简单初始零： 正常初始化数组为 0 需要在循环中为数组的每一个元素进行赋值，但在 C99 中可以采用 int num[10]={0}; 的方式来为数组的所有元素初始化为 0，这行代码的定义其实仅仅是将 num[0] 这个元素赋值为 0，但根据其语言特性，会为数组中其他没有指定值的数组元素赋值为 0<br />
+定位初始化： 在 C99 中可以在初始化代码块中直接指定下标进行赋值 int num[10] = {[2] = 3, 4}; 但是在 g++ 编译器中会报错，所以无需使用<br />
+数组大小：sizeof() 方法可以求出该变量在内存中占用的字节数，也就是当初始化完成的一个数组，那么它数组的字节数除单个元素的字节就是数组的大小 sizeof(num) / sizeof(num[0])<br />
+数组的复制： 不使用函数的情况下，只能对每一个元素进行单个赋值，而不能直接用数组名进行赋值</p>
+<h3 id="二维数组"><a class="markdownIt-Anchor" href="# 二维数组"></a> 二维数组</h3>
+<p>其中列号是必须指定的，但是行号可以由编译器来数<br />
+如果二维数组或多维数组的空间过大，可写在 main() 函数之外，申请静态空间</p>
+<h2 id="指针"><a class="markdownIt-Anchor" href="# 指针"></a> 指针</h2>
+<p>&amp; 和 * 运算符<br />
+取址符 &amp;：取变量的地址，它的运算对象必须是变量，在 scanf 函数中对变量进行输入，其实就是取地址后对该地址的存储对象进行填充<br />
+取值符 *：与指针搭配使用，用来获取当前指针指向的地址的变量的值</p>
+<p>创建指针<br />
+一个用来保存地址的变量，如：int *p;<br />
+<strong>示例：</strong> 这时定义一个变量 i，如果 i 的的地址为一个十六进制数 0x2000，那么将 i 的地址取出来放到 p 中 int *p=&amp;i; 就代表 p 此时存储的就是地址 2000<br />
+数组可以直接指向指针 int a[]; int *p=a;<br />
+如果在函数中定义的参数为指针变量，如 void f(int *p); 那么就说明是在调用的时候调用某个变量的地址；<br />
+需要给予的参数也就必须是一个地址，如 int i=f(&amp;i); 这句话的内容就是将地址赋给值<br />
+在函数里面可以通过这个指针访问到外面的 i</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *p)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;&amp;i=%p\n&quot;</span>, &amp;i);</span><br><span class="line">    f(&amp;i);<span class="comment">// 指针 p 并不知道变量 i，它只是得到了 i 的地址</span></span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; p=%p\n&quot;</span>, p);  <span class="comment">// 输出地址用 %p</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; p=%d\n&quot;</span>, *p); <span class="comment">// 输出内容，给指针变量添加 * 声明</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="指针的应用"><a class="markdownIt-Anchor" href="# 指针的应用"></a> 指针的应用</h3>
+<p>指针版 swap 函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *p, <span class="keyword">int</span> *q)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">5</span>, b = <span class="number">9</span>;</span><br><span class="line">    swap(&amp;a, &amp;b); <span class="comment">// 将 a 和 b 的地址传入函数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, a, b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *p, <span class="keyword">int</span> *q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> t = *p; <span class="comment">// 更换指针指向变量的值</span></span><br><span class="line">    *p = *q;</span><br><span class="line">    *q = t;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>指针没得到任何地址的时候，不要进行任何操作</p>
+<p>指针与数组<br />
+指针指向的并不是一个单一的地址，如果是 char 那么确实是一个，因为 sizeof(char)==1，如果是 int 型，那么指向的将是四个连续的地址，sizeof(int)==4<br />
+指针指向的不是一片连续分配的空间，那么加 1 也是毫无意义的<br />
+指针之间的互相相减，也是根据类型来：一个指向 int 型数组的头 0，一个指向尾 5，那么尾减头得到的将是 5 而不是其中的内存地址 4*5=20</p>
+<p>*p++<br />
+取出 p 当前所指向的那个数据之后再将 p 移动到下一个；</p>
+<ul>
+<li>的优先级低于 ++</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[] = &#123;<span class="number">7</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *p = a;</span><br><span class="line"><span class="keyword">while</span> (*p != <span class="number">-1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d  &quot;</span>, *p++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>指针类型<br />
+指针是没有类型的，但是如果指针指向不同的数据类型，指针之间的值也是不能随意调换的<br />
+<strong>类型转换：</strong> 可以采用（数据类型或 void) 的方式进行转换，但没有实际意义，只是让阅读代码的人用不同的眼光看待这个变量</p>
+<p>指针的作用</p>
+<ul>
+<li>需要传入较大的数作为参数</li>
+<li>传入数组进行数组操作时</li>
+<li>函数的返回值不止一个结果时</li>
+<li>需要用函数来修改不止一个变量时</li>
+<li>动态申请的内存</li>
+</ul>
+<p>结构体<br />
+结构体使用构造函数初始化，也可以创建多个构造函数，给每个构造函数定义不同的形参列表，以达到多形式初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">stu</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    stu *next;</span><br><span class="line">    stu(<span class="keyword">char</span> _name, <span class="keyword">int</span> _age)</span><br><span class="line">    &#123;</span><br><span class="line">        name = _name;</span><br><span class="line">        age = _age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"><span class="function">stu <span class="title">s</span><span class="params">(<span class="string">&#x27;h&#x27;</span>, <span class="number">11</span>)</span></span>; </span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s.name &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; s.age &lt;&lt; <span class="built_in">endl</span>; </span><br></pre></td></tr></table></figure>
+<p>此教程只为 PAT 刷题准备，目的是在 C++ 中使用 C 的大部分语法，但同时方便调用 STL 库函数，字符串类型采用 C++ 中的，后续用不上就不跟了</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：C 语言基本语法</li>
+        <li>本文作者：Aidan</li>
+        <li>创建时间：2021-09-17 17:26:24</li>
+        <li>
+            本文链接：https://aidanblog.top/2021/09/17/LearningCS-programming-C/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/09/18/Interview-document-Network/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">面试题：计算机基础之网络</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/09/11/Interview-code-58wExam/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">软件开发后端笔试 — 58 同城</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '0dde6a41b364eb48f140',
+                    clientSecret: '61f3a1cf971bb1dbdc3e6458ef4096cbe5ccfef4',
+                    repo: 'huaxin0304.github.io',
+                    owner: 'huaxin0304',
+                    admin: ['huaxin0304'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="https://aidanblog.top/about/">Aidan</a>
+        </div>
+        
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">鲁 ICP 备 2021030076 号</a></div>
+        
+    </div>
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%BF%90%E7%AE%97"><span class="nav-text"> 简单运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-text"> 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC"><span class="nav-text"> 赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F"><span class="nav-text"> 常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-text"> 浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="nav-text"> 字符型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text"> 字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text"> 运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E8%B5%8B%E5%80%BC"><span class="nav-text"> 复合赋值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD"><span class="nav-text"> 判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text"> 关系运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if"><span class="nav-text"> if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#switch"><span class="nav-text"> switch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-text"> 循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dowhile"><span class="nav-text"> (do)while</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#log-%20%E8%AE%A1%E7%AE%97"><span class="nav-text"> Log 计算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%85%A5"><span class="nav-text"> 循环读入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%20%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-text"> C 的随机数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text"> 数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%20%E8%BF%9B%E5%88%B6%E5%92%8C%20-16-%20%E8%BF%9B%E5%88%B6"><span class="nav-text"> 8 进制和 16 进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%20-2"><span class="nav-text"> 浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-text"> 类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2"><span class="nav-text"> 自动转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-text"> 强制转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bool-%20%E5%9E%8B"><span class="nav-text"> bool 型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text"> 逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%97%E5%8F%B7%E8%BF%90%E7%AE%97"><span class="nav-text"> 逗号运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text"> 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text"> 函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8"><span class="nav-text"> 函数的调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%88%E5%90%8E%E5%85%B3%E7%B3%BB"><span class="nav-text"> 函数的先后关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E4%BC%A0%E9%80%92"><span class="nav-text"> 参数的传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text"> 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text"> 数组的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text"> 数组的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-text"> 二维数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-text"> 指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text"> 指针的应用</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

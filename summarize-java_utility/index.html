@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Aidan">
+    
+    <title>
+        
+            Java 刷题实用方法总结 |
+        
+        栖迟於一丘
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"aidan-goodman.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/icon.jpg","favicon":"/images/icon.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/background.jpg","description":"栖迟於一丘，则天下不易其乐"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                栖迟於一丘
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Java 刷题实用方法总结</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/icon.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Aidan</span>
+                        
+                            <span class="author-label">Engineer</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-08-06 19:41:07
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>4.8k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>22 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+<p>Java 刷算法时的常用 API 以及一些奇技淫巧，当时参加蓝桥杯总结的，隔一段时间再刷题的时候总会拿出来看看</p>
+<span id="more"></span>
+<h2 id="java 语法操作"><a class="markdownIt-Anchor" href="#java 语法操作"></a> Java 语法操作</h2>
+<h3 id="输入 - 输出"><a class="markdownIt-Anchor" href="# 输入 - 输出"></a> 输入 输出</h3>
+<p>对字符串的获取可以采用 <code>next()</code> 和 <code>nextline()</code> ，用 <code>hasNext()</code> 或 <code>hasNextline()</code> 判断是否还有数据输入<br />
+<code>hasNext()</code> 或 <code>hasNextline()</code> 在 while 循环中可能没啥区别，但 <code>next()</code> 和 <code>nextline()</code> 却大有不同<br />
+<code>next()</code> 不能读取空格，换言之，读取到有效字符之后遇到空格就会停止，但 <code>nextline()</code> 以 Enter 结束，能存储对应格式的任何字符</p>
+<h4 id="多行输入"><a class="markdownIt-Anchor" href="# 多行输入"></a> 多行输入</h4>
+<p>存在输入多行，且每行输入的字符或数字个数不定的情况，这就需要将 <code>hasnext()</code> 和 <code>nextline()</code> 搭配使用<br />
+具体方法是实例化两个 <code>Scanner</code> 对象 former 和 latter，其中 latter 的参数是 former 的 <code>nextline()</code> ，然后使用 <code>hasnext()</code> 判断获取到的行是否存在下一个输入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line">scanner.nextLine();<span class="comment">// 抵消 N 后面的换行符</span></span><br><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10000</span>];</span><br><span class="line"><span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(scanner.nextLine());<span class="comment">// 获取每行</span></span><br><span class="line">    <span class="keyword">while</span> (input.hasNext()) &#123;<span class="comment">// 遍历每行数据</span></span><br><span class="line">        arr[count++] = input.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="输入字符"><a class="markdownIt-Anchor" href="# 输入字符"></a> 输入字符</h4>
+<p>Java 中不提供 <code>nextChar()</code> 的方法，但可以使用<code>next().charAt(0)</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc = new Scanner(System.in);</span><br><span class="line">char c= sc.next().charAt(0);</span><br><span class="line">// 将不空格的一串字符按数组存储：`sc.next().toCharArray();`</span><br><span class="line"></span><br><span class="line">int n = sc.nextInt();</span><br><span class="line">int m = sc.nextInt();</span><br><span class="line">char[][] arr = new char[n][m];</span><br><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    arr[i] = sc.next().toCharArray();// 读入字符串拆分成字符数组</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="格式化输出"><a class="markdownIt-Anchor" href="# 格式化输出"></a> 格式化输出</h4>
+<p><code>String.format()</code> 和 <code>System.out.printf()</code> 可以进行格式化的输出效果<br />
+<code>%4d</code> 和 <code>%-4d</code> 的区别： <code>%4d</code> 是靠右输出四位，不足用空格补齐； <code>%-4d</code> 是靠左输出</p>
+<p>输出 N 位小数，可以使用 <code>DecimalFormat</code> 对格式进行定义；或者使用 <code>String.format(格式, 浮点变量)</code> 直接打印</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">float</span> f= (<span class="type">float</span>) <span class="number">3.234567</span>;</span><br><span class="line">    <span class="comment">// 正常输出</span></span><br><span class="line">    System.out.println(f);</span><br><span class="line">    <span class="comment">// 采用类</span></span><br><span class="line">    DecimalFormat df=<span class="keyword">new</span> <span class="title class_">DecimalFormat</span>(<span class="string">&quot;#0.00&quot;</span>);</span><br><span class="line">    System.out.println(df.format(f));</span><br><span class="line">    <span class="comment">// 模仿 C 语言</span></span><br><span class="line">    System.out.printf(<span class="string">&quot;%.2f\n&quot;</span>,f);<span class="comment">//printf 支持和 C 语言相似的格式化输出</span></span><br><span class="line">    <span class="comment">// 转换格式</span></span><br><span class="line">    System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>,f));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：2.35  2.35</p>
+</blockquote>
+<h3 id="循环的注意"><a class="markdownIt-Anchor" href="# 循环的注意"></a> 循环的注意</h3>
+<h4 id="判断引用型"><a class="markdownIt-Anchor" href="# 判断引用型"></a> 判断引用型</h4>
+<p>引用型在循环中的判断不能直接使用 <code>==</code> , 因为即便内容相等的两个数也有可能被引用的地址不相同，而 <code>==</code> 比较的就是引用的地址如下面这种情况：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="string">&quot;HELLO&quot;</span>.toLowerCase();</span><br><span class="line"><span class="comment">// 此时的 str1 和 str2 在内容是是相等的但进行等值判断是却会进行不等的运算</span></span><br></pre></td></tr></table></figure>
+<p>对引用型的数据统一使用 <code>equals()</code> 的方式进行判断： <code>if(s1.equals(s2))&#123;···&#125;</code> 但注意如果 <code>s1</code> 的值是空的时候也会报错<br />
+所以可以使用 <code>if(s1!=null &amp;&amp; s1.equals(s2))&#123;···&#125;</code> 进行判断</p>
+<h4 id="switch 的用法"><a class="markdownIt-Anchor" href="#switch 的用法"></a> switch 的用法</h4>
+<p>Java 中的 switch 循环支持字符串的匹配，但不要忘记每个语句后面加 <code>break; </code></p>
+<p>Java12 之后的 switch 语句中支持使用 <code>-&gt;</code> 符号取代 <code>:</code> 进行自动跳出的 case 语句，如果一个 case 中要运行多个语句可以用 <code>&#123;&#125;</code> 括起来</p>
+<h3 id="数组的操作"><a class="markdownIt-Anchor" href="# 数组的操作"></a> 数组的操作</h3>
+<p>初始化数组可以使用 <code>Arrays.fill()</code> 方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span>[] arrPrimer = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">10000</span>];</span><br><span class="line">Arrays.fill(arrPrimer, Boolean.TRUE);</span><br></pre></td></tr></table></figure>
+<h4 id="遍历数组"><a class="markdownIt-Anchor" href="# 遍历数组"></a> 遍历数组</h4>
+<p>数组的遍历有三种方式： <code>for()</code> 循环搭配索引、 <code>for each</code> 迭代每个元素(但无法获取索引)、转换成字符串输出<br />
+Java 标准库提供的 <code>Arrays.toString()</code> 方法进行将整个数组转换为字符串直接打印输出，二维数组使用： <code>Arrays.deepToString()</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>&#125;;</span><br><span class="line">System.out.println(Arrays.toString(arr));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：[1, 2, 3, 4, 5, 6, 7]</p>
+</blockquote>
+<h4 id="数组排序"><a class="markdownIt-Anchor" href="# 数组排序"></a> 数组排序</h4>
+<p>使用 Arrays 中的 sort 方法可以对数组进行快速排序；若要实现降序排序可以使用 <code>Collections.reverseOrder()</code> 方法(仅对类起作用)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">9</span>&#125;;</span><br><span class="line">Arrays.sort(arr);</span><br><span class="line"></span><br><span class="line">Integer[] arr = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">9</span>&#125;;</span><br><span class="line">Arrays.sort(arr, Collections.reverseOrder());</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> m : arr)</span><br><span class="line">    System.out.print(m + <span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="拷贝数组"><a class="markdownIt-Anchor" href="# 拷贝数组"></a> 拷贝数组</h4>
+<p>可以直接使用数组自身的 <code>.clone()</code> 方法，因为数组是引用型，将数组放入方法或者类中很容易导致内外部操作互相影响，所以 <code>.clone()</code> 方法在这种场景下常用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">12</span>, <span class="number">99</span>, <span class="number">345</span>, <span class="number">234</span>, <span class="number">6</span>&#125;;</span><br><span class="line"><span class="type">int</span>[] copy = arr.clone();</span><br><span class="line"></span><br><span class="line">System.out.println(Arrays.toString(arr));</span><br><span class="line">System.out.println(Arrays.toString(copy));</span><br></pre></td></tr></table></figure>
+<p>系统提供的数组拷贝方法： <code>System.arraycopy(Object a, int begin_a, Object b, int begin_b, int length); </code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> a[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line">    <span class="type">int</span> b[]=<span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];</span><br><span class="line">    System.arraycopy(a,<span class="number">0</span>,b,<span class="number">0</span>,<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> n:b)</span><br><span class="line">        System.out.print(n+<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;<span class="comment">// 这种方法可以进行自定义长度的拷贝</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：1 2 3 0 0 0 0 0 0 0</p>
+</blockquote>
+<p>将一个数组的一部分拷贝到另一数组中可以使用 <code>Arrays.copyOf(object, length); </code> 方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> a[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line">    <span class="type">int</span> b[]= Arrays.copyOf(a,<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> n:b)</span><br><span class="line">        System.out.print(n+<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：1 2 3</p>
+</blockquote>
+<h3 id="arrays 类"><a class="markdownIt-Anchor" href="#arrays 类"></a> Arrays 类</h3>
+<p>Arrays 类提供很多使用的方法，常见的如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Arrays.asList(Object[] a) <span class="comment">// 数组转换成 List </span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(Object[] a, Object key)</span> <span class="comment">// 二分查找 (仅支持有序)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object[] a, Object[] a2)</span>  <span class="comment">// 判断两数组内容是否一致</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">(Object[] a, Object val)</span>   <span class="comment">// 在 a 中所有位置填充 val</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">(Object[] a, <span class="type">int</span> fromIndex, <span class="type">int</span> toIndex, Object val)</span></span><br><span class="line"><span class="comment">// 在[fromIndex,toIndex) 中填充 val</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 其提供了三种排序比较方法：</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(Object[] a)</span> <span class="comment">// 改进的快速排序（升序）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(Object[] a, <span class="type">int</span> fromIndex, <span class="type">int</span> toIndex)</span> <span class="comment">// 对 [fromIndex,toIndex) 升序排序</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(T[] a, Comparator&lt;? <span class="built_in">super</span> T&gt; c)</span> <span class="comment">// 自定义比较器排序</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串"><a class="markdownIt-Anchor" href="# 字符串"></a> 字符串</h3>
+<h4 id="character 类"><a class="markdownIt-Anchor" href="#character 类"></a> Character 类</h4>
+<p>主要应用其中的字符类型判断函数，可以节约时间</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Character.isDigit(char c)</code></td>
+<td style="text-align:center">判断字符 c 是否是数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Character.isLowerCase(char c)</code></td>
+<td style="text-align:center">判断 c 是否是小写字母字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Character.isUpperCase(char c)</code></td>
+<td style="text-align:center">判断 c 是否是大写字母字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Character.isLetterOrDigit(char c)</code></td>
+<td style="text-align:center">判断 c 是否是字母或数字字符</td>
+</tr>
+</tbody>
+</table>
+<h4 id="string 类"><a class="markdownIt-Anchor" href="#string 类"></a> String 类</h4>
+<p>存入两个字符相同的 string 型时，两者的地址也相同(将后创建的地址指向前者，节约内存)；但是 new String 的两个不同对象的内容即便相同地址也不同</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    String a=<span class="string">&quot;asd&quot;</span>;</span><br><span class="line">    String b=<span class="string">&quot;asd&quot;</span>;</span><br><span class="line">    <span class="type">boolean</span> t=a==b;</span><br><span class="line">    String c=<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;iop&quot;</span>);</span><br><span class="line">    String d=<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;iop&quot;</span>);</span><br><span class="line">    <span class="type">boolean</span> y=c==d;</span><br><span class="line">    System.out.println(t);</span><br><span class="line">    System.out.println(y);</span><br><span class="line">&#125;<span class="comment">//== 和！= 是用来判断 string 对象地址是否相同的</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：<br />
+true<br />
+false</p>
+</blockquote>
+<p>判断 string 对象是否相同用自带的 <code>.equals()</code> 方法，同时还提供一种忽略大小写的判断方法 <code>.equalsIgnoreCase()</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;asd&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;asd&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (a.equals(b)) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;==&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;!=&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(a.equalsIgnoreCase(b.toUpperCase()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：==<br />
+true</p>
+</blockquote>
+<p>要想遍历 string 的字符内容，需要将其转换为字符数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;asd&quot;</span>;</span><br><span class="line">    <span class="type">char</span> arr[] = a.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> n : arr)</span><br><span class="line">        System.out.print(n + <span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：a s d</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contains()</code></td>
+<td>是否包含相应的字符或子串</td>
+</tr>
+<tr>
+<td><code>trim()</code></td>
+<td>移除首位空白字符(\t, \r, \n)</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>是否为空</td>
+</tr>
+<tr>
+<td><code>isBlank()</code></td>
+<td>是否为空白字符串</td>
+</tr>
+<tr>
+<td><code>replace()</code></td>
+<td>替换字符(串)</td>
+</tr>
+<tr>
+<td><code>join(&quot;?&quot;,arr)</code></td>
+<td>用指定字符连接字符或字符串</td>
+</tr>
+<tr>
+<td><code>split(&quot;?&quot;)</code></td>
+<td>分割字符串</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;asdeGHAasDeFg&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> s.charAt(i);<span class="comment">// 字符串转换为字符</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 指定字符的查找</span></span><br><span class="line">    s.indexOf(<span class="string">&#x27;s&#x27;</span>);</span><br><span class="line">    s.indexOf(<span class="string">&#x27;s&#x27;</span>, <span class="number">2</span>);</span><br><span class="line">    s.lastIndexOf(<span class="string">&#x27;s&#x27;</span>);</span><br><span class="line">    s.lastIndexOf(<span class="string">&#x27;s&#x27;</span>, <span class="number">6</span>);</span><br><span class="line">    String[] ss = s.split(<span class="string">&quot;s&quot;</span>);<span class="comment">// 将字符串按指定字符分割</span></span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> s.substring(<span class="number">2</span>, <span class="number">5</span>);<span class="comment">// 截取 start 到 end 的子串，左闭右开</span></span><br><span class="line">    <span class="type">char</span>[] cs = s.toCharArray();<span class="comment">// 字符串转换为字符数组</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> s.toLowerCase();<span class="comment">// 将字符串转换为小写</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">sToL</span> <span class="operator">=</span> s.toUpperCase();<span class="comment">// 将字符串转换为大写</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">sToU</span> <span class="operator">=</span> String.valueOf(<span class="number">123</span>);</span><br><span class="line">    <span class="comment">// 将指定数据转换为字符串，也可加参数 radio 将其转换为 radio 进制的字符串</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="stringbuilder"><a class="markdownIt-Anchor" href="#stringbuilder"></a> StringBuilder</h4>
+<p>StringBuilder 对象被当作是一个包含字符序列的变长数组，在需要频繁更改字符串的场景下常用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">var</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;String&quot;</span>);</span><br><span class="line">    sb.append(<span class="string">&quot;123&quot;</span>);<span class="comment">// 每次返回添加后的自身，因此可以进行链式操作</span></span><br><span class="line">    sb.append(<span class="string">&quot;456&quot;</span>).append(<span class="string">&quot;789&quot;</span>);</span><br><span class="line">    sb.reverse();<span class="comment">// 反转</span></span><br><span class="line">    sb.delete(<span class="number">3</span>, <span class="number">7</span>);<span class="comment">// 删除索引从 a 开始到 b 的所有字符（左闭右开）</span></span><br><span class="line">    sb.deleteCharAt(<span class="number">3</span>);<span class="comment">// 删除索引为 a 的字符；</span></span><br><span class="line">    sb.insert(<span class="number">4</span>, <span class="string">&quot;string&quot;</span>);<span class="comment">// 参数字符插入到指定位置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="stringjoiner"><a class="markdownIt-Anchor" href="#stringjoiner"></a> StringJoiner</h4>
+<p>在 String 中有 <code>join</code> 方法进行使用特定字符连接字符串，但如果数据太多就不实用了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">var</span> <span class="variable">sj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringJoiner</span>(<span class="string">&quot; +++ &quot;</span>, <span class="string">&quot;Hello: &quot;</span>, <span class="string">&quot;!&quot;</span>);</span><br><span class="line">    <span class="comment">// 初始化时参数默认是连接符，多个参数格式为(连接符，开头，结束)</span></span><br><span class="line">    String[] strArr = &#123;<span class="string">&quot;Aidan&quot;</span>, <span class="string">&quot;Amy&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;Jhon&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (String each : strArr) &#123;</span><br><span class="line">        sj.add(each);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(sj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：Hello: Aidan +++ Amy +++ Bob +++ Jack +++ Jhon!</p>
+</blockquote>
+<h3 id="边界处理"><a class="markdownIt-Anchor" href="# 边界处理"></a> 边界处理</h3>
+<p>数组判空： <code>if(arr == null|| arr.length == 0)</code></p>
+<p>二维数组判空： <code>if(arr == null || arr.length == 0 || arr[0].length == 0)</code></p>
+<p>字符串判空： <code>if(str == null || str.equals(&quot;&quot;))</code></p>
+<p>所有封装类的最大最小值都有其存在的方法： <code>Integer n=Integer. MAX_VALUE; </code></p>
+<p>浮点数的判断条件，因为浮点数的值往往没法准确进行显示，所以对数据较为精确的题目的判断条件要使用差的绝对值小于某个临界值的形式： <code>Math.abs(x-0.1)&lt;0.00001</code></p>
+<p>有些数据的处理还要使用扩大 1000(甚至更大)倍转换成 <code>Long Long</code> 形式，然后在输出的时候除以之前扩大的倍数</p>
+<h3 id="格式转换"><a class="markdownIt-Anchor" href="# 格式转换"></a> 格式转换</h3>
+<p>程序运算时会进行自动转型，但这是由下向上转型，所有有些时候需要进行强制转型<br />
+最简单直接的是在变量前加(目标类型)，此方法只用于基本的数据类型，不支持 String 类型</p>
+<p>String 和其他基本数据类型的转换<br />
+可以使用 <code>toString</code> 将其他数据类型转换为 String 类，但这种方法只对包装类起作用(如：Integer)<br />
+使用 String 自带的 valueOf()方法，支持将基本的数据类型转换<br />
+而将 String 转换为其他，可以用自带类的.parseXXX(string)方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Integer a=<span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">100</span>);</span><br><span class="line">String s1=a.toString();<span class="comment">// 类自带的 toString()方法 </span></span><br><span class="line"><span class="type">int</span> i=<span class="number">99</span>;</span><br><span class="line">String s2=String.valueOf(i);<span class="comment">//String 自带的 valueOf() 方法 </span></span><br><span class="line">Integer b=Integer.parseInt(s2);<span class="comment">// 每个封装类类都有.parseXXX(String s) 方法</span></span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a class="markdownIt-Anchor" href="# 快速排序"></a> 快速排序</h3>
+<p>实用 Arrays 中的 sort 方法可以对数组进行快速排序<br />
+若要实现降序排序可以使用 <code>Collections.reverseOrder()</code> 方法(数组必须为 Integer 类)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer[] arr = &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">12</span>, <span class="number">99</span>, <span class="number">345</span>, <span class="number">234</span>, <span class="number">6</span>&#125;;</span><br><span class="line">Arrays.sort(arr);<span class="comment">// 默认排序</span></span><br><span class="line">Arrays.sort(arr, Collections.reverseOrder());<span class="comment">// 反转</span></span><br></pre></td></tr></table></figure>
+<h4 id="比较器"><a class="markdownIt-Anchor" href="# 比较器"></a> 比较器</h4>
+<p>使用 Comparator 类定义的比较器可以实现自定义排序<br />
+排序自定义类 (结构体) 时也可以使用 comparable 接口在类中直接覆写方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util. Arrays; </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* 比较器排序</span></span><br><span class="line"><span class="comment">        Arrays.sort(arr, new Comparator&lt;Integer&gt;() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public int compare(Integer o1, Integer o2) &#123;</span></span><br><span class="line"><span class="comment">                return o2-o1;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;);*/</span></span><br><span class="line"></span><br><span class="line">        Person[] arr = <span class="keyword">new</span> <span class="title class_">Person</span>[]&#123;<span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">12</span>, <span class="string">&quot;Aidan&quot;</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">6</span>, <span class="string">&quot;John&quot;</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">12</span>, <span class="string">&quot;Bob&quot;</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">17</span>, <span class="string">&quot;Amy&quot;</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">15</span>, <span class="string">&quot;Dave&quot;</span>),&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* 比较器自定义排序类</span></span><br><span class="line"><span class="comment">        Arrays.sort(arr, new Comparator&lt;Person&gt;() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public int compare(Person o1, Person o2) &#123;</span></span><br><span class="line"><span class="comment">                if (o1.age != o2.age) &#123;</span></span><br><span class="line"><span class="comment">                    return o1.age - o2.age;</span></span><br><span class="line"><span class="comment">                &#125; else &#123;</span></span><br><span class="line"><span class="comment">                    return o1.name.compareTo(o2.name);</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;);*/</span></span><br><span class="line">        Arrays.sort(arr, (o1, o2) -&gt; &#123;<span class="comment">// 比较器的简单写法</span></span><br><span class="line">            <span class="keyword">if</span> (o1.age != o2.age) &#123;</span><br><span class="line">                <span class="keyword">return</span> o1.age - o2.age;<span class="comment">// 升序</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> o1.name.compareTo(o2.name);<span class="comment">// 降序</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span> (Person each : arr) &#123;</span><br><span class="line">            System.out.println(each.toString());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(<span class="type">int</span> age, String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot; 姓名：&quot;</span> + name + <span class="string">&quot;，年龄：&quot;</span> + age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="大数类"><a class="markdownIt-Anchor" href="# 大数类"></a> 大数类</h3>
+<p>大数类分为整型 <code>BigInteger</code> 和浮点型<code>BigDecimal</code></p>
+<p>定义 BigInteger 类型可以使用实例化类的方法，也可以使用 BigInteger 中的 valueOf(数字 / 变量)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigInteger</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="string">&quot;3&quot;</span>);</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">b</span> <span class="operator">=</span> BigInteger.valueOf(<span class="number">3</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">788</span>;</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">c</span> <span class="operator">=</span> BigInteger.valueOf(i);</span><br></pre></td></tr></table></figure>
+<p>大数的类是在 java.math.* 包里的，所以继承了 math 的所有方法，而运算也是使用方法来进行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigInteger</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigInteger</span>(<span class="string">&quot;3&quot;</span>);</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">b</span> <span class="operator">=</span> BigInteger.valueOf(-<span class="number">3</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">788</span>;</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">c</span> <span class="operator">=</span> BigInteger.valueOf(i);</span><br><span class="line">BigInteger ad=a.add(c);</span><br><span class="line">BigInteger sub=a.subtract(b);</span><br><span class="line">BigInteger mul=a.multiply(b);</span><br><span class="line">BigInteger div=c.divide(a);</span><br><span class="line">BigInteger re=c.remainder(a);</span><br><span class="line">BigInteger ab=b.abs();</span><br><span class="line">System.out.println(ad);</span><br><span class="line">System.out.println(sub);</span><br><span class="line">System.out.println(mul);</span><br><span class="line">System.out.println(div);</span><br><span class="line">System.out.println(re);</span><br><span class="line">System.out.println(ab);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结果：791 6 -9 262 2 3</p>
+</blockquote>
+<p>BigDecimal 使用 <code>.scale()</code> 表示小数位数<br />
+具体计算方法与整型差不读，但浮点型进行除法的时候可能会存在除不尽的情况，这样就可以对其进行精度上的取余<br />
+判断相等时可能小数位后面存在多个 0 这样虽然不影响大小但在操作的时候会导致大小不同，可以使用 <code>compareTo()</code> 方法</p>
+<h3 id="math 类"><a class="markdownIt-Anchor" href="#math 类"></a> Math 类</h3>
+<p>可以求 sqrt(平方根)、abs(绝对值)、max、min、pow(幂)、取整 (ceil、floor、round) 具体查阅 API</p>
+<p>输出一个随机数用 random()方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">double</span> <span class="variable">c</span> <span class="operator">=</span> Math.random();</span><br><span class="line">    System.out.println(c);<span class="comment">// 输出一个 0-1 之间的随机数（double 类型）</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> (<span class="type">int</span>) (Math.random() * b + <span class="number">1</span>);<span class="comment">// 输出一个 1-b 之间的随机数 </span></span><br><span class="line">    System.out.println(d);</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">50</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">e</span> <span class="operator">=</span> (<span class="type">int</span>) (Math.random() * (b - a + <span class="number">1</span>) + a);<span class="comment">// 输出一个 a-b 的随机数</span></span><br><span class="line">    System.out.println(e);</span><br><span class="line">&#125;<span class="comment">//+ 1 是因为 random() 最大取不到 1, 所以上限取整后就会少 1</span></span><br></pre></td></tr></table></figure>
+<h2 id="模板"><a class="markdownIt-Anchor" href="# 模板"></a> 模板</h2>
+<h3 id="公约公倍数"><a class="markdownIt-Anchor" href="# 公约公倍数"></a> 公约公倍数</h3>
+<p>求最大公约数可以采用辗转相除法，就是两数的最大公约数就是较小数和两数余数的最大公约数<br />
+最小公倍数等于两数的乘积除最大公约数<br />
+BigInteger 提供 <code>.gcd(x, y)</code> 方法自动判断</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);<span class="comment">// 辗转相除法，两数的最大公约数等于较小数与两数余数的最大公约数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">lcm</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a*b/gcd(a,b);<span class="comment">// 最小公倍数等于两数相乘除最大公约数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(gcd(<span class="number">12</span>,<span class="number">5</span>));</span><br><span class="line">        System.out.println(lcm(<span class="number">12</span>,<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">        <span class="type">BigInteger</span> <span class="variable">y</span> <span class="operator">=</span> BigInteger.valueOf(<span class="number">123</span>);</span><br><span class="line">        <span class="type">BigInteger</span> <span class="variable">x</span> <span class="operator">=</span> BigInteger.valueOf(<span class="number">12345</span>);</span><br><span class="line">        System.out.println(x.gcd(y));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="判断闰年"><a class="markdownIt-Anchor" href="# 判断闰年"></a> 判断闰年</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">400</span> == <span class="number">0</span> || (n % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; n % <span class="number">100</span> != <span class="number">0</span>))</span><br><span class="line">        System.out.println(<span class="string">&quot;true&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        System.out.println(<span class="string">&quot;false&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="判断质数"><a class="markdownIt-Anchor" href="# 判断质数"></a> 判断质数</h3>
+<p>质数的判断一般有三种方式：定义方法、遍历因子、打表<br />
+一二种的理念相同：遍历因子看能否取余，因子最大不会超过 X 的 <code>sqrt</code></p>
+<p>打表的复杂度最低</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种：</span></span><br><span class="line"><span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">judge</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= Math.sqrt(x); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>) &#123;</span><br><span class="line">            flag = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> flag;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第二种：</span></span><br><span class="line"><span class="keyword">while</span> (count &lt; N) &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>; j * j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i % j == <span class="number">0</span>) &#123;</span><br><span class="line">            flag = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打表：判断 0~9999 中是否为素数</span></span><br><span class="line"><span class="type">boolean</span>[] arrPrimer = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">10000</span>];</span><br><span class="line">Arrays.fill(arrPrimer, Boolean.TRUE);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i * i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>; j * j &lt; <span class="number">10000</span>; j++) &#123;</span><br><span class="line">        arrPrimer[i * j] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="进制转换"><a class="markdownIt-Anchor" href="# 进制转换"></a> 进制转换</h3>
+<p>在 Integer 对象中，常用的进制转换</p>
+<table>
+<thead>
+<tr>
+<th>十进制的转换对象</th>
+<th>对应的方法和参数</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字转换字符串</td>
+<td>Integer.toBinaryString(n);</td>
+<td>二进制字符串</td>
+</tr>
+<tr>
+<td>数字转换字符串</td>
+<td>Integer.toOctalString(n);</td>
+<td>八进制字符串</td>
+</tr>
+<tr>
+<td>数字转换字符串</td>
+<td>Integer.toHexString(n);</td>
+<td>十六进制字符串</td>
+</tr>
+<tr>
+<td>数字转换字符串</td>
+<td>Integer.toString(n, r);</td>
+<td>r 进制字符串</td>
+</tr>
+<tr>
+<td>字符串转换数字</td>
+<td>Integer.parseInt(str, r);</td>
+<td>r 进制整数</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">      <span class="type">int</span> n=<span class="number">18</span>;</span><br><span class="line">      System.out.println(Integer.toBinaryString(n));<span class="comment">// 转换二进制</span></span><br><span class="line">      System.out.println(Integer.toOctalString(n));<span class="comment">// 转换成八进制</span></span><br><span class="line">      System.out.println(Integer.toHexString(n));<span class="comment">// 转换成十六进制</span></span><br><span class="line">      System.out.println(Integer.toString(n,<span class="number">2</span>));</span><br><span class="line">      <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;10101&quot;</span>;</span><br><span class="line">      System.out.println(Integer.parseInt(s,<span class="number">2</span>));<span class="comment">// 回转为十进制</span></span><br><span class="line">      <span class="comment">// 判断十进制整数转换成二进制后“1”的个数</span></span><br><span class="line">      System.out.println(Integer.bitCount(<span class="number">21</span>));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="全排列"><a class="markdownIt-Anchor" href="# 全排列"></a> 全排列</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="type">int</span> arr[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>&#125;;</span><br><span class="line"><span class="keyword">static</span> <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> k)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (k &gt;= <span class="number">9</span>) &#123;<span class="comment">// 递归出口</span></span><br><span class="line">        ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> k; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> arr[k];</span><br><span class="line">        arr[k] = arr[i];</span><br><span class="line">        arr[i] = t;<span class="comment">// 将相邻的两位数互换</span></span><br><span class="line">        dfs(k + <span class="number">1</span>);<span class="comment">// 互换下一个</span></span><br><span class="line">        t = arr[k];</span><br><span class="line">        arr[k] = arr[i];</span><br><span class="line">        arr[i] = t;<span class="comment">// 回溯时更换回来，不影响下一次排列</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    dfs(<span class="number">0</span>);</span><br><span class="line">    System.out.println(ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="走迷宫"><a class="markdownIt-Anchor" href="# 走迷宫"></a> 走迷宫</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util. Scanner; </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MazeDfs</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * DFS 算法解决走迷宫问题</span></span><br><span class="line"><span class="comment">     * 0: 表示通路</span></span><br><span class="line"><span class="comment">     * 1: 表示死路</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> <span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">String</span> <span class="variable">shortestPath</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化一个迷宫地图</span></span><br><span class="line">        <span class="comment">// 0: 表示通路</span></span><br><span class="line">        <span class="comment">// 1: 表示死路</span></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in); </span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> sc.nextInt(); </span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> sc.nextInt(); </span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>; </span><br><span class="line">        <span class="type">int</span>[][] map = <span class="keyword">new</span> <span class="title class_">int</span>[x][y]; </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; x; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; y; j++)</span><br><span class="line">                map[i][j] = sc.nextInt(); </span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 从矩阵的左上角位置开始搜索</span></span><br><span class="line"><span class="comment">         * */</span></span><br><span class="line">        dfs(<span class="number">0</span>, <span class="number">0</span>, map);</span><br><span class="line">        <span class="keyword">if</span> (shortestPath.length() != <span class="number">0</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot; 最短路线为：&quot;</span> + shortestPath);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            System.out.println(<span class="string">&quot; 没有找到路线！&quot;</span>);</span><br><span class="line">        <span class="type">char</span>[] s = shortestPath.toCharArray();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : s) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">                count++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span>[][] map)</span> &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 获得矩阵的大小</span></span><br><span class="line"><span class="comment">         * */</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> map.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> map[<span class="number">0</span>].length;</span><br><span class="line">        <span class="comment">// 设置结束条件</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || y &lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 如果坐标越界，或者 maze[x][y]==1 表示遇到障碍</span></span><br><span class="line">        <span class="keyword">if</span> (x &gt; m - <span class="number">1</span> || y &gt; n - <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 表示遇到障碍</span></span><br><span class="line">        <span class="keyword">if</span> (map[x][y] == <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span>; <span class="comment">// 判断是否通路和越界</span></span><br><span class="line">        <span class="keyword">if</span> (x == m - <span class="number">1</span> &amp;&amp; y == n - <span class="number">1</span>) &#123; <span class="comment">// 判断是否抵达出口</span></span><br><span class="line">            path = path + <span class="string">&quot;(&quot;</span> + x + <span class="string">&quot;,&quot;</span> + y + <span class="string">&quot;)&quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (shortestPath.length() == <span class="number">0</span> || shortestPath.length() &gt; path.length())</span><br><span class="line">                shortestPath = path;</span><br><span class="line">            System.out.println(<span class="string">&quot; 找到路线:&quot;</span> + path);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">temp</span> <span class="operator">=</span> path;</span><br><span class="line">        path = path + <span class="string">&quot;(&quot;</span> + x + <span class="string">&quot;,&quot;</span> + y + <span class="string">&quot;)&quot;</span> + <span class="string">&quot;-&quot;</span>; <span class="comment">// 记录路线</span></span><br><span class="line">        map[x][y] = <span class="number">1</span>; <span class="comment">// 将走过的路标记</span></span><br><span class="line">        <span class="comment">// 向四个方向搜索</span></span><br><span class="line">        dfs(x + <span class="number">1</span>, y, map);  <span class="comment">// 向右搜索</span></span><br><span class="line">        dfs(x, y + <span class="number">1</span>, map);  <span class="comment">// 向下搜索</span></span><br><span class="line">        dfs(x, y - <span class="number">1</span>, map);  <span class="comment">// 向上搜索</span></span><br><span class="line">        dfs(x - <span class="number">1</span>, y, map);  <span class="comment">// 向左搜索</span></span><br><span class="line">        <span class="comment">// 将路线和标记恢复成上一次的状态</span></span><br><span class="line">        map[x][y] = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 清除</span></span><br><span class="line">        path = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="背包"><a class="markdownIt-Anchor" href="# 背包"></a> 背包</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BackPack</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">V</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">int</span>[] v = <span class="keyword">new</span> <span class="title class_">int</span>[N];<span class="comment">// 记录体积</span></span><br><span class="line">        <span class="type">int</span>[] w = <span class="keyword">new</span> <span class="title class_">int</span>[N];<span class="comment">// 记录价值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            v[i] = sc.nextInt();</span><br><span class="line">            w[i] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[V + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">            <span class="comment">// 从大到小遍历</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> V; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j &gt;= v[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                    dp[j] = Math.max(dp[j], dp[j - v[i - <span class="number">1</span>]] + w[i - <span class="number">1</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; V + <span class="number">1</span>; i++) &#123;</span><br><span class="line">            System.out.println(dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：Java 刷题实用方法总结</li>
+        <li>本文作者：Aidan</li>
+        <li>创建时间：2021-08-06 19:41:07</li>
+        <li>
+            本文链接：https://aidanblog.top/summarize-java_utility/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/lan_qiao-common_question/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">蓝桥杯普及题</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/summarize-c_plus_utility/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">C++ 刷题实用方法总结</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'ba3b48819b578103a5dd',
+                    clientSecret: 'ae3935801875ec26564ef58a21b754a0ac3e1627',
+                    repo: 'aidan-goodman.github.io',
+                    owner: 'aidan-goodman',
+                    admin: ['aidan-goodman'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2024&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="https://aidanblog.top/about/">Aidan</a>
+        </div>
+        
+        
+    </div>
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java%20%E8%AF%AD%E6%B3%95%E6%93%8D%E4%BD%9C"><span class="nav-text"> Java 语法操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%20-%20%E8%BE%93%E5%87%BA"><span class="nav-text"> 输入 输出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E8%A1%8C%E8%BE%93%E5%85%A5"><span class="nav-text"> 多行输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6"><span class="nav-text"> 输入字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-text"> 格式化输出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B3%A8%E6%84%8F"><span class="nav-text"> 循环的注意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%BC%95%E7%94%A8%E5%9E%8B"><span class="nav-text"> 判断引用型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#switch%20%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-text"> switch 的用法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-text"> 数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="nav-text"> 遍历数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="nav-text"> 数组排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E6%95%B0%E7%BB%84"><span class="nav-text"> 拷贝数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arrays%20%E7%B1%BB"><span class="nav-text"> Arrays 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text"> 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#character%20%E7%B1%BB"><span class="nav-text"> Character 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string%20%E7%B1%BB"><span class="nav-text"> String 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stringbuilder"><span class="nav-text"> StringBuilder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stringjoiner"><span class="nav-text"> StringJoiner</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E7%95%8C%E5%A4%84%E7%90%86"><span class="nav-text"> 边界处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text"> 格式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text"> 快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E5%99%A8"><span class="nav-text"> 比较器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%95%B0%E7%B1%BB"><span class="nav-text"> 大数类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#math%20%E7%B1%BB"><span class="nav-text"> Math 类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-text"> 模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E7%BA%A6%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-text"> 公约公倍数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E9%97%B0%E5%B9%B4"><span class="nav-text"> 判断闰年</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%B4%A8%E6%95%B0"><span class="nav-text"> 判断质数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-text"> 进制转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E6%8E%92%E5%88%97"><span class="nav-text"> 全排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%B0%E8%BF%B7%E5%AE%AB"><span class="nav-text"> 走迷宫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E5%8C%85"><span class="nav-text"> 背包</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

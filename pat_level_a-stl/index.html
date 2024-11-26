@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Aidan">
+    
+    <title>
+        
+            PAT 甲级 - 模板库 |
+        
+        栖迟於一丘
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"aidan-goodman.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/icon.jpg","favicon":"/images/icon.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/background.jpg","description":"栖迟於一丘，则天下不易其乐"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                栖迟於一丘
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">PAT 甲级 - 模板库</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/icon.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Aidan</span>
+                        
+                            <span class="author-label">Engineer</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-08-14 18:49:48
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/PAT/">PAT</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>8.8k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>48 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+<p>C++ 中为使用者提供了标准的模板库也叫 STL，其中封装了大部分刷题所要用到的容器，而我在之前写过一篇《C++ STL》，所以这里就是单纯的记录一些类型题的解题思路，并不重复赘述具体的使用和含义 <br />
+话说 C++ 中的容器在易用性和速度上做出的平衡要比其他语言强的不是一星半点，之前看过侯捷老师的手撕 STL 源码，后来转 Java 没能坚持看完，但仍感觉受益匪浅（虽说时间一长忘干净了），不知道什么原因 B 站上找不到了 </p>
+<span id="more"></span>
+<h2 id="vector"><a class="markdownIt-Anchor" href="#vector"></a> vector</h2>
+<h4 id="1039"><a class="markdownIt-Anchor" href="#1039"></a> 1039</h4>
+<p><strong> 题目：Course List for Student</strong></p>
+<p>Zhejiang University has 40000 students and provides 2500 courses. Now given the student name lists of all the courses, you are supposed to output the registered course list for each student who comes for a query.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains 2 positive integers: N (≤40, 000), the number of students who look for their course lists, and K (≤2, 500), the total number of courses. Then the student name lists are given for the courses (numbered from 1 to K) in the following format: for each course i, first the course index i and the number of registered students Ni (≤200) are given in a line. Then in the next line, Ni student names are given. A student name consists of 3 capital English letters plus a one-digit number. Finally the last line contains the N names of students who come for a query. All the names and numbers in a line are separated by a space.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, print your results in N lines. Each line corresponds to one student, in the following format: first print the student’s name, then the total number of registered courses of that student, and finally the indices of the courses in increasing order. The query results must be printed in the same order as input. All the data in a line must be separated by a space, with no extra space at the end of the line.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>11 5<br />
+4 7<br />
+BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1<br />
+1 4<br />
+ANN0 BOB5 JAY9 LOR6<br />
+2 7<br />
+ANN0 BOB5 FRA8 JAY9 JOE4 KAT3 LOR6<br />
+3 1<br />
+BOB5<br />
+5 9<br />
+AMY7 ANN0 BOB5 DON2 FRA8 JAY9 KAT3 LOR6 ZOE1<br />
+ZOE1 ANN0 BOB5 JOE4 JAY9 FRA8 DON2 AMY7 KAT3 LOR6 NON9</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>ZOE1 2 4 5<br />
+ANN0 3 1 2 5<br />
+BOB5 5 1 2 3 4 5<br />
+JOE4 1 2<br />
+JAY9 4 1 2 4 5<br />
+FRA8 3 2 4 5<br />
+DON2 2 4 5<br />
+AMY7 1 5<br />
+KAT3 3 2 4 5<br />
+LOR6 4 1 2 4 5<br />
+NON9 0</p>
+</blockquote>
+<p><strong> 思路：</strong> 使用 map 搭配 vector 动态数组进行课程编号和姓名的映射存放，因数据规模过大，不要使用 cin 和 cout，姓名使用 char 数组存储，避免使用字符串，查询输出时，进行编号的排序 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;n, &amp;k);</span><br><span class="line">    map&lt;string, vector&lt;<span class="type">int</span>&gt;&gt; list;<span class="comment">// 建立集合，用姓名映射课程的方式 </span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">5</span>];<span class="comment">// 直接输入字符串会超时，使用字符数组的方式 </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> id, cnt;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;id, &amp;cnt);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cnt; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, name);</span><br><span class="line">            list[name].<span class="built_in">push_back</span>(id);<span class="comment">// 根据姓名将课程 ID 放入 </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, name);</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; v = list[name];<span class="comment">// 查询时放入临时数组 </span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s %d&quot;</span>, name, v.<span class="built_in">size</span>());</span><br><span class="line">        <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());<span class="comment">// 排序后输出 </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; v.<span class="built_in">size</span>(); j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot; %d&quot;</span>, v[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1047"><a class="markdownIt-Anchor" href="#1047"></a> 1047</h4>
+<p><strong> 题目：Student List for Course</strong></p>
+<p>Zhejiang University has 40,000 students and provides 2,500 courses. Now given the registered course list of each student, you are supposed to output the student name lists of all the courses.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains 2 numbers: N (≤40,000), the total number of students, and K (≤2,500), the total number of courses. Then N lines follow, each contains a student’s name (3 capital English letters plus a one-digit number), a positive number C (≤20) which is the number of courses that this student has registered, and then followed by C course numbers. For the sake of simplicity, the courses are numbered from 1 to K.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, print the student name lists of all the courses in increasing order of the course numbers. For each course, first print in one line the course number and the number of registered students, separated by a space. Then output the students’ names in alphabetical order. Each name occupies a line.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>10 5<br />
+ZOE1 2 4 5<br />
+ANN0 3 5 2 1<br />
+BOB5 5 3 4 2 1 5<br />
+JOE4 1 2<br />
+JAY9 4 1 2 5 4<br />
+FRA8 3 4 2 5<br />
+DON2 2 4 5<br />
+AMY7 1 5<br />
+KAT3 3 5 4 2<br />
+LOR6 4 2 4 1 5</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>1 4<br />
+ANN0<br />
+BOB5<br />
+JAY9<br />
+LOR6<br />
+2 7<br />
+ANN0<br />
+BOB5<br />
+FRA8<br />
+JAY9<br />
+JOE4<br />
+KAT3<br />
+LOR6<br />
+3 1<br />
+BOB5<br />
+4 7<br />
+BOB5<br />
+DON2<br />
+FRA8<br />
+JAY9<br />
+KAT3<br />
+LOR6<br />
+ZOE1<br />
+5 9<br />
+AMY7<br />
+ANN0<br />
+BOB5<br />
+DON2<br />
+FRA8<br />
+JAY9<br />
+KAT3<br />
+LOR6<br />
+ZOE1</p>
+</blockquote>
+<p><strong> 思路：</strong> 使用 map 映射 vector 字符串数组即可 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">int main()</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int n, m;</span></span><br><span class="line"><span class="comment">    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);</span></span><br><span class="line"><span class="comment">    map&lt;int, vector&lt;string&gt;&gt; list;</span></span><br><span class="line"><span class="comment">    char name[5];</span></span><br><span class="line"><span class="comment">    for (int i = 0; i &lt; n; i++)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        int k;</span></span><br><span class="line"><span class="comment">        scanf(&quot;%s %d&quot;, name, &amp;k);</span></span><br><span class="line"><span class="comment">        for (int j = 0; j &lt; k; j++)</span></span><br><span class="line"><span class="comment">        &#123;</span></span><br><span class="line"><span class="comment">            int temp;</span></span><br><span class="line"><span class="comment">            scanf(&quot;%d&quot;, &amp;temp);</span></span><br><span class="line"><span class="comment">            list[temp].push_back(name);</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    for (int i=1;i&lt;=m;i++)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        vector&lt;string&gt; str = list[i];</span></span><br><span class="line"><span class="comment">        printf(&quot;%d %d\n&quot;, i, str.size());</span></span><br><span class="line"><span class="comment">        sort(str.begin(), str.end());</span></span><br><span class="line"><span class="comment">        for (int j = 0; j &lt; str.size(); j++)</span></span><br><span class="line"><span class="comment">        &#123;</span></span><br><span class="line"><span class="comment">            printf(&quot;%s\n&quot;,str[j].c_str());</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    system(&quot;pause&quot;);</span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, k, c, idx;</span><br><span class="line">vector&lt;vector&lt;string&gt;&gt; course;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;k);</span><br><span class="line">    course.<span class="built_in">resize</span>(k + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        string name;</span><br><span class="line">        cin &gt;&gt; name &gt;&gt; c;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;idx);</span><br><span class="line">            course[idx].<span class="built_in">push_back</span>(name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, course[i].<span class="built_in">size</span>());</span><br><span class="line">        <span class="built_in">sort</span>(course[i].<span class="built_in">begin</span>(), course[i].<span class="built_in">end</span>());</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; course[i].<span class="built_in">size</span>(); ++j)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, course[i][j].<span class="built_in">c_str</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="set"><a class="markdownIt-Anchor" href="#set"></a> set</h2>
+<h4 id="1063"><a class="markdownIt-Anchor" href="#1063"></a> <strong>1063</strong></h4>
+<p><strong> 题目：Set Similarity</strong></p>
+<p>Given two sets of integers, the similarity of the sets is defined to be Nc/Nt×100%, where Nc is the number of distinct common numbers shared by the two sets, and Nt is the total number of distinct numbers in the two sets. Your job is to calculate the similarity of any given pair of sets.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. Each case first gives a positive integer N (≤50) which is the total number of sets. Then N lines follow, each gives a set with a positive <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo stretchy="false">(</mo><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">M (≤10^4)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> and followed by M integers in the range [0, 109]. After the input of sets, a positive integer K (≤2000) is given, followed by K lines of queries. Each query gives a pair of set numbers (the sets are numbered from 1 to N). All the numbers in a line are separated by a space.</p>
+<p><em>Output Specification:</em></p>
+<p>For each query, print in one line the similarity of the sets, in the percentage form accurate up to 1 decimal place.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>3<br />
+3 99 87 101<br />
+4 87 101 5 87<br />
+7 99 101 18 5 135 18 99<br />
+2<br />
+1 2<br />
+1 3</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>50.0%<br />
+33.3%</p>
+</blockquote>
+<p><strong> 思路：</strong> 相似性的计算就是在集合 B 中出现过的集合 A 的元素除以所有不重复的元素和；注意：集合变量的名称不能时模板类的名称 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m; </span><br><span class="line">set&lt;<span class="type">int</span>&gt; st[<span class="number">51</span>]; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">compare</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> <span class="comment">// 将比较方法独立出来 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> samenum = <span class="number">0</span>, totalnum = st[b].<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = st[a].<span class="built_in">begin</span>(); it != st[a].<span class="built_in">end</span>(); it++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (st[b].<span class="built_in">find</span>(*it) != st[b].<span class="built_in">end</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            samenum++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            totalnum++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.1f%\n&quot;</span>, samenum * <span class="number">100.00</span> / totalnum); <span class="comment">// 输出保留一位小数 </span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> size, temp;</span><br><span class="line">        cin &gt;&gt; size;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; size; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; temp;</span><br><span class="line">            st[i].<span class="built_in">insert</span>(temp); <span class="comment">// 存储到 set 数组中 </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cin &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        <span class="built_in">compare</span>(a, b); <span class="comment">// 通过查找编号调用方法 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="string"><a class="markdownIt-Anchor" href="#string"></a> string</h2>
+<h4 id="1060"><a class="markdownIt-Anchor" href="#1060"></a> 1060</h4>
+<p><strong> 题目：Are They Equal</strong></p>
+<p>If a machine can save only 3 significant digits, the float numbers 12300 and 12358.9 are considered equal since they are both saved as 0.123×105 with simple chopping. Now given the number of significant digits on a machine and two float numbers, you are supposed to tell if they are treated equal in that machine.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case which gives three numbers N, A and B, where N (&lt;100) is the number of significant digits, and A and B are the two float numbers to be compared. Each float number is non-negative, no greater than 10100, and that its total digit number is less than 100.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, print in a line <code>YES</code> if the two numbers are treated equal, and then the number in the standard form <code>0.d[1]...d[N]*10^k</code> (<code>d[1]</code>&gt;0 unless the number is 0); or <code>NO</code> if they are not treated equal, and then the two numbers in their standard form. All the terms must be separated by a space, with no extra space at the end of a line.</p>
+<p>Note: Simple chopping is assumed without rounding.</p>
+<p><em>Sample Input 1:</em></p>
+<blockquote>
+<p>3 12300 12358.9</p>
+</blockquote>
+<p><em>Sample Output 1:</em></p>
+<blockquote>
+<p>YES 0.123*10^5</p>
+</blockquote>
+<p><em>Sample Input 2:</em></p>
+<blockquote>
+<p>3 120 128</p>
+</blockquote>
+<p><em>Sample Output 2:</em></p>
+<blockquote>
+<p>NO 0.12010^3 0.12810^3</p>
+</blockquote>
+<p><strong> 思路：</strong> 只需判断保存有效数字的字符串和指数位数是否相同即可保证一对数字的相同，根据不同情况的处理封装在方法中 </p>
+<ul>
+<li>
+<p> 指数在 main 方法中定义，使用 <code>int&amp; e</code> 的方式处理同一变量，否则无法返回两个变量 </p>
+</li>
+<li>
+<p> 在方法中首先去掉前导零，去掉后有三种情况，首字符为小数点为小数，否则为正数，若字符串长度为 0，为 0</p>
+</li>
+<li>
+<p> 当为小数时，去掉小数点，小数点后面 0 的个数即为指数 e 的值 </p>
+</li>
+<li>
+<p> 为正数时，向后寻找小数点或末尾，非 0 或末尾，指数 e++</p>
+</li>
+<li>
+<p> 最后根据输入 N 的值每次放入一个有效字符，不足补 0，返回判断即可 </p>
+</li>
+</ul>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function">string <span class="title">deal</span><span class="params">(string str, <span class="type">int</span> &amp;e)</span> <span class="comment">// 字符串处理方法，指数 e 为恒定地址变量 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (str.<span class="built_in">length</span>() &gt; <span class="number">0</span> &amp;&amp; str[<span class="number">0</span>] == <span class="string">&#x27;0&#x27;</span>) <span class="comment">// 将前导 0 去除 </span></span><br><span class="line">    &#123;</span><br><span class="line">        str.<span class="built_in">erase</span>(str.<span class="built_in">begin</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (str[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span>) <span class="comment">// 去掉 0 为小数点说明为小数 </span></span><br><span class="line">    &#123;</span><br><span class="line">        str.<span class="built_in">erase</span>(str.<span class="built_in">begin</span>());</span><br><span class="line">        <span class="keyword">while</span> (str.<span class="built_in">length</span>() &gt; <span class="number">0</span> &amp;&amp; str[<span class="number">0</span>] == <span class="string">&#x27;0&#x27;</span>) <span class="comment">// 通过小数点后边 0 的个数获得指数的负数值 </span></span><br><span class="line">        &#123;</span><br><span class="line">            str.<span class="built_in">erase</span>(str.<span class="built_in">begin</span>());</span><br><span class="line">            e--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="comment">// 不是小数点即为整数 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (k &lt; str.<span class="built_in">length</span>() &amp;&amp; str[k] != <span class="string">&#x27;.&#x27;</span>) <span class="comment">// 小数点之前的位数为指数值 </span></span><br><span class="line">        &#123;</span><br><span class="line">            k++;</span><br><span class="line">            e++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (k &lt; str.<span class="built_in">length</span>()) <span class="comment">// 最后 k 的值小于字符串长度说明有小数点，将其去掉 </span></span><br><span class="line">        &#123;</span><br><span class="line">            str.<span class="built_in">erase</span>(str.<span class="built_in">begin</span>() + k);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (str.<span class="built_in">length</span>() == <span class="number">0</span>) <span class="comment">// 如果去掉 0，字符串长度为 0，说明指数也为 0</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line">    k = <span class="number">0</span>;</span><br><span class="line">    string dealed;</span><br><span class="line">    <span class="keyword">while</span> (num &lt; n) <span class="comment">// 保存 n 个有效数字 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (k &lt; str.<span class="built_in">length</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            dealed += str[k++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            dealed += <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dealed;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string s1, s2, s3, s4;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; s1 &gt;&gt; s2;</span><br><span class="line">    <span class="type">int</span> e1 = <span class="number">0</span>, e2 = <span class="number">0</span>;</span><br><span class="line">    s3 = <span class="built_in">deal</span>(s1, e1);</span><br><span class="line">    s4 = <span class="built_in">deal</span>(s2, e2);</span><br><span class="line">    <span class="keyword">if</span> (s3 == s4 &amp;&amp; e1 == e2) <span class="comment">// 通过有效数字和指数判断科学计数法是否相同 </span></span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;YES 0.&quot;</span> &lt;&lt; s3 &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; e1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;NO 0.&quot;</span> &lt;&lt; s3 &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; e1 &lt;&lt; <span class="string">&quot; 0.&quot;</span> &lt;&lt; s4 &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; e2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="map"><a class="markdownIt-Anchor" href="#map"></a> map</h2>
+<h4 id="1100"><a class="markdownIt-Anchor" href="#1100"></a> 1100</h4>
+<p><strong> 题目：Mars Numbers</strong></p>
+<p>People on Mars count their numbers with base 13:</p>
+<ul>
+<li>
+<p>Zero on Earth is called “tret” on Mars.</p>
+</li>
+<li>
+<p>The numbers 1 to 12 on Earth is called “jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec” on Mars, respectively.</p>
+</li>
+<li>
+<p>For the next higher digit, Mars people name the 12 numbers as “tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou”, respectively.</p>
+</li>
+</ul>
+<p>For examples, the number 29 on Earth is called “hel mar” on Mars; and “elo nov” on Mars corresponds to 115 on Earth. In order to help communication between people from these two planets, you are supposed to write a program for mutual translation between Earth and Mars number systems.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains a positive integer N (&lt;100). Then N lines follow, each contains a number in [0, 169), given either in the form of an Earth number, or that of Mars.</p>
+<p><em>Output Specification:</em></p>
+<p>For each number, print in a line the corresponding number in the other language.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>4<br />
+29<br />
+5<br />
+elo nov<br />
+tam</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>hel mar<br />
+may<br />
+115<br />
+13</p>
+</blockquote>
+<p><strong> 思路：</strong> 因为数据不会超过 169，直接采用打表的方式将每个数字与其“火星文”形式对应起来 </p>
+<ul>
+<li>
+<p> 字符串数组对应数字转“火星文”，map&lt;string, int&gt; 对应“火星文”转数字 </p>
+</li>
+<li>
+<p> 打表将个位和整十位分为一种情况，其他分为一种情况，进行运算赋值即可 </p>
+</li>
+</ul>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line">string unitDigit[<span class="number">13</span>] = &#123;<span class="string">&quot;tret&quot;</span>, <span class="string">&quot;jan&quot;</span>, <span class="string">&quot;feb&quot;</span>, <span class="string">&quot;mar&quot;</span>, <span class="string">&quot;apr&quot;</span>, <span class="string">&quot;may&quot;</span>, <span class="string">&quot;jun&quot;</span>, <span class="string">&quot;jly&quot;</span>, <span class="string">&quot;aug&quot;</span>, <span class="string">&quot;sep&quot;</span>, <span class="string">&quot;oct&quot;</span>, <span class="string">&quot;nov&quot;</span>, <span class="string">&quot;dec&quot;</span>&#125;; </span><br><span class="line">string tenDigit[<span class="number">13</span>] = &#123;<span class="string">&quot;tret&quot;</span>, <span class="string">&quot;tam&quot;</span>, <span class="string">&quot;hel&quot;</span>, <span class="string">&quot;maa&quot;</span>, <span class="string">&quot;huh&quot;</span>, <span class="string">&quot;tou&quot;</span>, <span class="string">&quot;kes&quot;</span>, <span class="string">&quot;hei&quot;</span>, <span class="string">&quot;elo&quot;</span>, <span class="string">&quot;syy&quot;</span>, <span class="string">&quot;lok&quot;</span>, <span class="string">&quot;mer&quot;</span>, <span class="string">&quot;jou&quot;</span>&#125;; </span><br><span class="line"><span class="comment">// 将个位十位保存 </span></span><br><span class="line">string numToStr[<span class="number">170</span>]; <span class="comment">// 通过数字作为下标输出字符串 </span></span><br><span class="line">map&lt;string, <span class="type">int</span>&gt; strToNum; <span class="comment">// 通过字符串映射到数字 </span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">13</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        numToStr[i] = unitDigit[i];</span><br><span class="line">        strToNum[unitDigit[i]] = i; <span class="comment">// 存储个位的互相对应 </span></span><br><span class="line">        numToStr[i * <span class="number">13</span>] = tenDigit[i];</span><br><span class="line">        strToNum[tenDigit[i]] = i * <span class="number">13</span>; <span class="comment">// 存储整十位的互相对应 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; <span class="number">13</span>; i++)</span><br><span class="line">    &#123; <span class="comment">// 每位的对应 </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt; <span class="number">13</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            string str = tenDigit[i] + <span class="string">&quot; &quot;</span> + unitDigit[j];</span><br><span class="line">            numToStr[i * <span class="number">13</span> + j] = str;</span><br><span class="line">            strToNum[str] = i * <span class="number">13</span> + j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">init</span>(); <span class="comment">// 调用打表 </span></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    string query;</span><br><span class="line">    <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">getline</span>(cin, query);</span><br><span class="line">        <span class="keyword">if</span> (query[<span class="number">0</span>] &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; query[<span class="number">0</span>] &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> num = <span class="built_in">stoi</span>(query); <span class="comment">// 将属于数字的转换为 int 型 </span></span><br><span class="line">            cout &lt;&lt; numToStr[num] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; strToNum[query] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1054"><a class="markdownIt-Anchor" href="#1054"></a> 1054</h4>
+<p><strong> 题目：The Dominant Color</strong></p>
+<p>Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of information for each pixel. In an image, the color with the largest proportional area is called the dominant color. A <strong>strictly</strong> dominant color takes more than half of the total area. Now given an image of resolution M by N (for example, 800×600), you are supposed to point out the strictly dominant color.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains 2 positive numbers: M (≤800) and N (≤600) which are the resolutions of the image. Then N lines follow, each contains M digital colors in the range [0,224). It is guaranteed that the strictly dominant color exists for each input image. All the numbers in a line are separated by a space.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, simply print the dominant color in a line.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>5 3<br />
+0 0 255 16777215 24<br />
+24 24 0 0 24<br />
+24 0 24 24 24</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>24</p>
+</blockquote>
+<p><strong> 思路：</strong> map&lt;int,int&gt; 集合映射颜色与出现次数，当次数超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>∗</mo><mi>N</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">M*N/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord">2</span></span></span></span> 时输出 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line">    map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; arr;</span><br><span class="line">    <span class="type">int</span> half = m * n / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> temp;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">            arr[temp]++;</span><br><span class="line">            <span class="keyword">if</span> (arr[temp] &gt; half)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, temp);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1071"><a class="markdownIt-Anchor" href="#1071"></a> 1071</h4>
+<p><strong> 题目：Speech Patterns</strong></p>
+<p>People often have a preference among synonyms of the same word. For example, some may prefer “the police”, while others may prefer “the cops”. Analyzing such patterns can help to narrow down a speaker’s identity, which is useful when validating, for example, whether it’s still the same person behind an online avatar.</p>
+<p>Now given a paragraph of text sampled from someone’s speech, can you find the person’s most commonly used word?</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, there is one line of text no more than 1048576 characters in length, terminated by a carriage return <code>\n</code> . The input contains at least one alphanumerical character, i.e., one character from the set [<code>0-9 A-Z a-z</code> ].</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, print in one line the most commonly occurring word in the input text, followed by a space and the number of times it has occurred in the input. If there are more than one such words, print the lexicographically smallest one. The word should be printed in all lower case. Here a “word” is defined as a continuous sequence of alphanumerical characters separated by non-alphanumerical characters or the line beginning/end.</p>
+<p>Note that words are case <strong>insensitive</strong>.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>Can1: “Can a can can a can?  It can!”</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>can 5</p>
+</blockquote>
+<p><strong> 思路：</strong> 判断是否属于有效字符，遇到非法字符便截取之前有效的字符放到 map 集合中，注意：最后一位时，即便属于非法字符也要放入 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    string str, temp;</span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; mcount;</span><br><span class="line">    <span class="built_in">getline</span>(cin, str);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">length</span>(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isalnum</span>(str[i])) <span class="comment">// 属于数字和字母 </span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isupper</span>(str[i]))</span><br><span class="line">            &#123; <span class="comment">// 大写转换为小写 </span></span><br><span class="line">                str[i] = <span class="built_in">tolower</span>(str[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            temp += str[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isalnum</span>(str[i]) || i == str.<span class="built_in">length</span>() - <span class="number">1</span>) <span class="comment">// 非法字符或最后一位 </span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.<span class="built_in">length</span>() != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                mcount[temp]++; <span class="comment">// 不为空便自增 </span></span><br><span class="line">            &#125;</span><br><span class="line">            temp.<span class="built_in">clear</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line">    string ans;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = mcount.<span class="built_in">begin</span>(); it != mcount.<span class="built_in">end</span>(); it++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (it-&gt;second &gt; max)</span><br><span class="line">        &#123;</span><br><span class="line">            max = it-&gt;second;</span><br><span class="line">            ans = it-&gt;first; <span class="comment">// 遍历求次数最大，记录输出 </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; max &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1022"><a class="markdownIt-Anchor" href="#1022"></a> 1022</h4>
+<p><strong> 题目：Digital Library</strong></p>
+<p>A Digital Library contains millions of books, stored according to their titles, authors, key words of their abstracts, publishers, and published years. Each book is assigned an unique 7-digit number as its ID. Given any query from a reader, you are supposed to output the resulting books, sorted in increasing order of their ID’s.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains a positive integer N (≤104) which is the total number of books. Then N blocks follow, each contains the information of a book in 6 lines:</p>
+<ul>
+<li>
+<p>Line #1: the 7-digit ID number;</p>
+</li>
+<li>
+<p>Line #2: the book title – a string of no more than 80 characters;</p>
+</li>
+<li>
+<p>Line #3: the author – a string of no more than 80 characters;</p>
+</li>
+<li>
+<p>Line #4: the key words – each word is a string of no more than 10 characters without any white space, and the keywords are separated by exactly one space;</p>
+</li>
+<li>
+<p>Line #5: the publisher – a string of no more than 80 characters;</p>
+</li>
+<li>
+<p>Line #6: the published year – a 4-digit number which is in the range [1000, 3000].</p>
+</li>
+</ul>
+<p>It is assumed that each book belongs to one author only, and contains no more than 5 key words; there are no more than 1000 distinct key words in total; and there are no more than 1000 distinct publishers.</p>
+<p>After the book information, there is a line containing a positive integer M (≤1000) which is the number of user’s search queries. Then M lines follow, each in one of the formats shown below:</p>
+<ul>
+<li>
+<p>1: a book title</p>
+</li>
+<li>
+<p>2: name of an author</p>
+</li>
+<li>
+<p>3: a key word</p>
+</li>
+<li>
+<p>4: name of a publisher</p>
+</li>
+<li>
+<p>5: a 4-digit number representing the year</p>
+</li>
+</ul>
+<p><em>Output Specification:</em></p>
+<p>For each query, first print the original query in a line, then output the resulting book ID’s in increasing order, each occupying a line. If no book is found, print <code>Not Found</code> instead.</p>
+<p><em>Sample Input:</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1111111</span><br><span class="line">The Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line">test code debug sort keywords</span><br><span class="line">ZUCS Print</span><br><span class="line">2011</span><br><span class="line">3333333</span><br><span class="line">Another Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line">test code sort keywords</span><br><span class="line">ZUCS Print2</span><br><span class="line">2012</span><br><span class="line">2222222</span><br><span class="line">The Testing Book</span><br><span class="line">CYLL</span><br><span class="line">keywords debug book</span><br><span class="line">ZUCS Print2</span><br><span class="line">2011</span><br><span class="line">6</span><br><span class="line">1: The Testing Book</span><br><span class="line">2: Yue Chen</span><br><span class="line">3: keywords</span><br><span class="line">4: ZUCS Print</span><br><span class="line">5: 2011</span><br><span class="line">3: blablabla</span><br></pre></td></tr></table></figure>
+<p><em>Sample Output:</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1: The Testing Book</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">2: Yue Chen</span><br><span class="line">1111111</span><br><span class="line">3333333</span><br><span class="line">3: keywords</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">3333333</span><br><span class="line">4: ZUCS Print</span><br><span class="line">1111111</span><br><span class="line">5: 2011</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">3: blablabla</span><br><span class="line">Not Found</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong> 思路：</strong></p>
+<ul>
+<li>
+<p> 对除了 id 之外的其他信息都建立一个 map&lt;string, set&gt;，把相应的 id 插入对应搜索词的 map 的集合里面，形成一个信息对应一个集合，集合里面是复合条件的书的 id</p>
+</li>
+<li>
+<p> 因为对于输入的关键词（可以重复，算是书本对应的 tag 标签）没有给定关键词的个数，可以使用 while(cin &gt;&gt; s) 并且判断 c = getchar()，c 是否等于、n，如果是再退出循环 </p>
+</li>
+<li>
+<p> 建立 query，通过传参的形式可以将不同的 map 名称统一化，先要判断 map.find() 和 m.end() 是否相等，如果不等再去遍历整个 map，输出所有满足条件的 id，如果相等就说明不存在这个搜索词对应的 id，那么就要输出 Not Found</p>
+</li>
+<li>
+<p> 传参一定要用引用，否则最后一组数据可能会超时 </p>
+</li>
+</ul>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">map&lt;string, set&lt;<span class="type">int</span>&gt;&gt; title, author, key, pub, year; <span class="comment">// 每类信息建立一个 map 集合映射 ID</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">query</span><span class="params">(map&lt;string, set&lt;<span class="type">int</span>&gt;&gt; &amp;m, string &amp;str)</span> <span class="comment">// 查询方法使用引用的形式，防止大数据超市 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (m.<span class="built_in">find</span>(str) != m.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = m[str].<span class="built_in">begin</span>(); it != m[str].<span class="built_in">end</span>(); it++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%07d\n&quot;</span>, *it);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Not Found\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m, id, num;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    string ttitle, tauthor, tkey, tpub, tyear;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d\n&quot;</span>, &amp;id);</span><br><span class="line">        <span class="built_in">getline</span>(cin, ttitle);</span><br><span class="line">        title[ttitle].<span class="built_in">insert</span>(id);</span><br><span class="line">        <span class="built_in">getline</span>(cin, tauthor);</span><br><span class="line">        author[tauthor].<span class="built_in">insert</span>(id);</span><br><span class="line">        <span class="keyword">while</span> (cin &gt;&gt; tkey) <span class="comment">// 关键字使用分隔输入的形式 </span></span><br><span class="line">        &#123;</span><br><span class="line">            key[tkey].<span class="built_in">insert</span>(id);</span><br><span class="line">            <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">getline</span>(cin, tpub);</span><br><span class="line">        pub[tpub].<span class="built_in">insert</span>(id);</span><br><span class="line">        <span class="built_in">getline</span>(cin, tyear);</span><br><span class="line">        year[tyear].<span class="built_in">insert</span>(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d: &quot;</span>, &amp;num);</span><br><span class="line">        string temp;</span><br><span class="line">        <span class="built_in">getline</span>(cin, temp);</span><br><span class="line">        cout &lt;&lt; num &lt;&lt; <span class="string">&quot;: &quot;</span> &lt;&lt; temp &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">1</span>) <span class="comment">// 根据查询类型判断方法引用的集合 </span></span><br><span class="line">            <span class="built_in">query</span>(title, temp);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (num == <span class="number">2</span>)</span><br><span class="line">            <span class="built_in">query</span>(author, temp);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (num == <span class="number">3</span>)</span><br><span class="line">            <span class="built_in">query</span>(key, temp);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (num == <span class="number">4</span>)</span><br><span class="line">            <span class="built_in">query</span>(pub, temp);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (num == <span class="number">5</span>)</span><br><span class="line">            <span class="built_in">query</span>(year, temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="stack"><a class="markdownIt-Anchor" href="#stack"></a> stack</h2>
+<h4 id="1051"><a class="markdownIt-Anchor" href="#1051"></a> 1051</h4>
+<p><strong> 题目：Pop Sequence</strong></p>
+<p>Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if M is 5 and N is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): M (the maximum capacity of the stack), N (the length of push sequence), and K (the number of pop sequences to be checked). Then K lines follow, each contains a pop sequence of N numbers. All the numbers in a line are separated by a space.</p>
+<p><em>Output Specification:</em></p>
+<p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>5 7 5<br />
+1 2 3 4 5 6 7<br />
+3 2 1 7 5 6 4<br />
+7 6 5 4 3 2 1<br />
+5 6 4 3 7 2 1<br />
+1 7 6 5 4 3 2</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>YES<br />
+NO<br />
+YES<br />
+NO</p>
+</blockquote>
+<p><strong> 思路：</strong> 使用 stack 模板模拟入栈，每放入一个元素后判断其与输出序列要输出的元素是否相同，相同后出栈，位数后移；<br />
+有两种情况表示出栈顺序不对：1、当前入栈的元素超过栈的容量；2、模拟完成后栈不为空 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line">stack&lt;<span class="type">int</span>&gt; st; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, n, k, arr[<span class="number">1001</span>]; <span class="comment">// 保存序列 </span></span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="keyword">while</span> (k--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) <span class="comment">// 将栈清空 </span></span><br><span class="line">        &#123;</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; arr[i]; <span class="comment">// 保存序列 </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            st.<span class="built_in">push</span>(i);</span><br><span class="line">            <span class="keyword">if</span> (st.<span class="built_in">size</span>() &gt; m) <span class="comment">// 当前个数超过容量 </span></span><br><span class="line">            &#123;</span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (!st.<span class="built_in">empty</span>() &amp;&amp; st.<span class="built_in">top</span>() == arr[current]) <span class="comment">// 每放入一个元素判断出栈 </span></span><br><span class="line">            &#123;</span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (st.<span class="built_in">empty</span>() &amp;&amp; flag) <span class="comment">// 模拟完成后栈空和容量未超表示正确 </span></span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;YES&quot;</span> &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;NO&quot;</span> &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="queue"><a class="markdownIt-Anchor" href="#queue"></a> queue</h2>
+<h4 id="1056"><a class="markdownIt-Anchor" href="#1056"></a> 1056</h4>
+<p><strong> 题目：Mice and Rice</strong></p>
+<p><strong>Mice and Rice</strong> is the name of a programming contest in which each programmer must write a piece of code to control the movements of a mouse in a given map. The goal of each mouse is to eat as much rice as possible in order to become a FatMouse.</p>
+<p>First the playing order is randomly decided for NP programmers. Then every NG programmers are grouped in a match. The fattest mouse in a group wins and enters the next turn. All the losers in this turn are ranked the same. Every NG winners are then grouped in the next match until a final winner is determined.</p>
+<p>For the sake of simplicity, assume that the weight of each mouse is fixed once the programmer submits his/her code. Given the weights of all the mice and the initial playing order, you are supposed to output the ranks for the programmers.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains 2 positive integers: NP and NG (≤1000), the number of programmers and the maximum number of mice in a group, respectively. If there are less than NG mice at the end of the player’s list, then all the mice left will be put into the last group. The second line contains NP distinct non-negative numbers Wi (i=0,⋯,NP−1) where each Wi is the weight of the i-th mouse respectively. The third line gives the initial playing order which is a permutation of 0,⋯,NP−1 (assume that the programmers are numbered from 0 to NP−1). All the numbers in a line are separated by a space.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, print the final ranks in a line. The i-th number is the rank of the i-th programmer, and all the numbers must be separated by a space, with no extra space at the end of the line.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>11 3<br />
+25 18 0 46 37 3 19 22 57 56 10<br />
+6 0 8 7 10 5 9 1 4 2 3</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>5 5 5 2 5 5 5 3 1 3 5</p>
+</blockquote>
+<p><strong> 思路：</strong> 根据输入重量时的顺序作为编号，保存到结构体的 weight 中，并将排列规则放入队列中，分组进行比较之后将每组的获胜者放入队列最后，判断一个便出队一个，当进行一轮的比较之后，队列后的就是下一轮的排列顺序，继续分组重复操作；每轮中个人的排名就是当前轮的组数 +1，进入下一轮的人员继续更新排名直到只剩一人时退出循环 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Mouse</span> <span class="comment">// 建立老鼠结构体 </span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> weight, rank;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Mouse mouse[<span class="number">1001</span>];</span><br><span class="line">    <span class="type">int</span> Np, Ng;</span><br><span class="line">    cin &gt;&gt; Np &gt;&gt; Ng;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; Np; i++) <span class="comment">// 按输入顺序为其编号 </span></span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; mouse[i].weight;</span><br><span class="line">    &#125;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; qu;</span><br><span class="line">    <span class="type">int</span> order;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; Np; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; order;</span><br><span class="line">        qu.<span class="built_in">push</span>(order); <span class="comment">// 将排列顺序放入队列中 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> temp = Np, group;  <span class="comment">//temp 表示此轮的人员，group 表示分成几组 </span></span><br><span class="line">    <span class="keyword">while</span> (qu.<span class="built_in">size</span>() != <span class="number">1</span>) <span class="comment">// 角逐到只剩一个 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (temp % Ng == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            group = temp / Ng;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            group = temp / Ng + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; group; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> k = qu.<span class="built_in">front</span>(); <span class="comment">//k 表示小组的胜出者 </span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; Ng; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (i * Ng + j &gt;= temp) <span class="comment">// 存在最后一组数量不够的情况 </span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> front = qu.<span class="built_in">front</span>();</span><br><span class="line">                <span class="keyword">if</span> (mouse[front].weight &gt; mouse[k].weight)</span><br><span class="line">                &#123;</span><br><span class="line">                    k = front;</span><br><span class="line">                &#125;</span><br><span class="line">                mouse[front].rank = group + <span class="number">1</span>; <span class="comment">// 每次都更新排名 </span></span><br><span class="line">                qu.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            qu.<span class="built_in">push</span>(k); <span class="comment">// 每组最大的放到队列中进入下一轮 </span></span><br><span class="line">        &#125;</span><br><span class="line">        temp = group; <span class="comment">// 新一轮的成员数就是上一轮的组数 </span></span><br><span class="line">    &#125;</span><br><span class="line">    mouse[qu.<span class="built_in">front</span>()].rank = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; Np; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; mouse[i].rank;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; Np - <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="linklist"><a class="markdownIt-Anchor" href="#linklist"></a> linklist</h2>
+<h4 id="1074"><a class="markdownIt-Anchor" href="#1074"></a> 1074</h4>
+<p><strong> 题目：Reversing Linked List</strong></p>
+<p>Given a constant K and a singly linked list L, you are supposed to reverse the links of every K elements on L. For example, given L being 1→2→3→4→5→6, if K=3, then you must output 3→2→1→6→5→4; if K=4, you must output 4→3→2→1→5→6.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains the address of the first node, a positive N (≤105) which is the total number of nodes, and a positive K (≤N) which is the length of the sublist to be reversed. The address of a node is a 5-digit nonnegative integer, and NULL is represented by -1.</p>
+<p>Then N lines follow, each describes a node in the format:</p>
+<blockquote>
+<p>Address Data Next</p>
+</blockquote>
+<p>where <code>Address</code> is the position of the node, <code>Data</code> is an integer, and <code>Next</code> is the position of the next node.</p>
+<p><em>Output Specification:</em></p>
+<p>For each case, output the resulting ordered linked list. Each node occupies a line, and is printed in the same format as in the input.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>00100 6 4<br />
+00000 4 99999<br />
+00100 1 12309<br />
+68237 6 -1<br />
+33218 3 00000<br />
+99999 5 68237<br />
+12309 2 33218</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>00000 4 33218<br />
+33218 3 12309<br />
+12309 2 00100<br />
+00100 1 99999<br />
+99999 5 68237<br />
+68237 6 -1</p>
+</blockquote>
+<p><strong> 思路：</strong> 建立链表的节点结构体，根据 next 的数据为其排序规则从小到大赋值，根据规则排序，就可以模拟链表的连接；处理完链表后根据分组的单组容量构建输出规则进行输出 </p>
+<p>**tips：** 整数型不管前导零有多少，始终存储有效数组，如：输入 00100，存储为 100</p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> edge = <span class="number">100010</span>; </span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> <span class="comment">// 定义链表的结点结构体 </span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> address, data, next;</span><br><span class="line">    <span class="type">int</span> order; <span class="comment">// 定义位置，后续排序 </span></span><br><span class="line"></span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Node a, Node b)</span> <span class="comment">// 排序规则 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a.order &lt; b.order;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    Node node[edge];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edge; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        node[i].order = edge; <span class="comment">// 将所有的规则定义为一个较大值 </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> begin, n, k;</span><br><span class="line">    cin &gt;&gt; begin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="type">int</span> address;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) <span class="comment">// 读入数据 </span></span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; address;</span><br><span class="line">        cin &gt;&gt; node[address].data &gt;&gt; node[address].next;</span><br><span class="line">        node[address].address = address;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (begin != <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        node[begin].order = count++; <span class="comment">// 将规则的先后顺序定义 </span></span><br><span class="line">        begin = node[begin].next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(node, node + edge, cmp);       <span class="comment">// 排序连接起来 </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; count / k; i++) <span class="comment">// 分块进行输出 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = (i + <span class="number">1</span>) * k - <span class="number">1</span>; j &gt; i * k; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[j].address, node[j].data, node[j - <span class="number">1</span>].address);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 每一组的最后一个数据进行判断输出 </span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%05d %d &quot;</span>, node[i * k].address, node[i * k].data); <span class="comment">// 输出数据 </span></span><br><span class="line">        <span class="keyword">if</span> (i &lt; count / k - <span class="number">1</span>)                                     <span class="comment">// 如果不是最后一组 </span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d\n&quot;</span>, node[(i + <span class="number">2</span>) * k - <span class="number">1</span>].address); <span class="comment">// 输出越组后的最后一个（倒序的第一个）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (count % k == <span class="number">0</span>) <span class="comment">// 如果能整分组，输出 -1</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="comment">// 不能整分 </span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%05d\n&quot;</span>, node[(i + <span class="number">1</span>) * k].address); <span class="comment">// 不能分组的第一个的地址 </span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = count / k * k; l &lt; count; l++)  <span class="comment">// 将其照常输出即可 </span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%05d %d &quot;</span>, node[l].address, node[l].data);</span><br><span class="line">                    <span class="keyword">if</span> (l &lt; count - <span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;%05d\n&quot;</span>, node[l + <span class="number">1</span>].address);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1032"><a class="markdownIt-Anchor" href="#1032"></a> 1032</h4>
+<p>** 题目：Sharing **</p>
+<p>To store English words, one method is to use linked lists and store a word letter by letter. To save some space, we may let the words share the same sublist if they share the same suffix. For example, <code>loading</code> and <code>being</code> are stored as showed in Figure 1.</p>
+<p>You are supposed to find the starting position of the common suffix (e.g. the position of <code>i</code> in Figure 1).</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains two addresses of nodes and a positive <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N (≤10^5)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>, where the two addresses are the addresses of the first nodes of the two words, and N is the total number of nodes. The address of a node is a 5-digit positive integer, and NULL is represented by −1.</p>
+<p>Then N lines follow, each describes a node in the format:</p>
+<p>Address Data Next</p>
+<p>where<code>Address</code> is the position of the node, <code>Data</code> is the letter contained by this node which is an English letter chosen from {a-z, A-Z}, and <code>Next</code> is the position of the next node.</p>
+<p><em>Output Specification:</em></p>
+<p>For each case, simply output the 5-digit starting position of the common suffix. If the two words have no common suffix, output <code>-1</code> instead.</p>
+<p><em>Sample Input 1:</em></p>
+<blockquote>
+<p>11111 22222 9<br />
+67890 i 00002<br />
+00010 a 12345<br />
+00003 g -1<br />
+12345 D 67890<br />
+00002 n 00003<br />
+22222 B 23456<br />
+11111 L 00001<br />
+23456 e 67890<br />
+00001 o 00010</p>
+</blockquote>
+<p><em>Sample Output 1:</em></p>
+<blockquote>
+<p>67890</p>
+</blockquote>
+<p><strong> 思路：</strong> 建立一个范围足够的静态链表，遍历第一条链表，将出现过的节点标记，在遍历第二条时出现标记过的节点则输出下标 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> edge = <span class="number">100001</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> <span class="comment">// 定义结构体 </span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    <span class="type">int</span> next;</span><br><span class="line">    <span class="type">bool</span> flag; <span class="comment">// 对第一条链表的出现的节点赋予正值 </span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node node[edge];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edge; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        node[i].flag = <span class="literal">false</span>; <span class="comment">// 将每一个节点初始设置为未出现 </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> begin1, begin2, total;</span><br><span class="line">    cin &gt;&gt; begin1 &gt;&gt; begin2 &gt;&gt; total;</span><br><span class="line">    <span class="type">int</span> address, next;</span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; total; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; address &gt;&gt; data &gt;&gt; next;</span><br><span class="line">        node[address].data = data;</span><br><span class="line">        node[address].next = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (begin1 != <span class="number">-1</span>) <span class="comment">// 遍历第一条，对每一个节点做标记 </span></span><br><span class="line">    &#123;</span><br><span class="line">        node[begin1].flag = <span class="literal">true</span>;</span><br><span class="line">        begin1 = node[begin1].next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (begin2 != <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node[begin2].flag)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>; <span class="comment">// 在第二条中出现被标记的节点跳出 </span></span><br><span class="line">        &#125;</span><br><span class="line">        begin2 = node[begin2].next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (begin2 != <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, begin2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1052"><a class="markdownIt-Anchor" href="#1052"></a> 1052</h4>
+<p><strong> 题目：Linked List Sorting</strong></p>
+<p>A linked list consists of a series of structures, which are not necessarily adjacent in memory. We assume that each structure contains an integer <code>key</code> and a <code>Next</code> pointer to the next structure. Now given a linked list, you are supposed to sort the structures according to their key values in increasing order.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains a positive N (&lt;105) and an address of the head node, where N is the total number of nodes in memory and the address of a node is a 5-digit positive integer. NULL is represented by −1.</p>
+<p>Then N lines follow, each describes a node in the format:</p>
+<p>Address Key Next</p>
+<p>where <code>Address</code> is the address of the node in memory, <code>Key</code> is an integer in [−105, 105], and <code>Next</code> is the address of the next node. It is guaranteed that all the keys are distinct and there is no cycle in the linked list starting from the head node.</p>
+<p><em>Output Specification:</em></p>
+<p>For each test case, the output format is the same as that of the input, where N is the total number of nodes in the list and all the nodes must be sorted order.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>5 00001<br />
+11111 100 -1<br />
+00001 0 22222<br />
+33333 100000 11111<br />
+12345 -1 33333<br />
+22222 1000 12345</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>5 12345<br />
+12345 -1 00001<br />
+00001 0 11111<br />
+11111 100 22222<br />
+22222 1000 33333<br />
+33333 100000 -1</p>
+</blockquote>
+<p><strong> 思路：</strong> 题目要求只输出能够连接的节点，所以对节点结构体定义同一个标记变量，将有效的节点根据 data 的大小进行升序排序 </p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> edge = <span class="number">100001</span>; </span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> address, data, next;</span><br><span class="line">    <span class="type">bool</span> flag; <span class="comment">// 存在无法连接的节点，创建标记属性 </span></span><br><span class="line"></span><br><span class="line">&#125;; </span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Node a, Node b)</span> <span class="comment">// 根据数据大小进行排序 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (a.flag == <span class="literal">false</span> || b.flag == <span class="literal">false</span>) <span class="comment">// 只要 a 或 b 有一个不符合条件，就将其放置到最后 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a.flag &gt; b.flag;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a.data &lt; b.data; <span class="comment">// 其他根据数据大小进行排序 </span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    Node node[edge];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edge; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        node[i].flag = <span class="literal">false</span>; <span class="comment">// 先将所有节点的标记置为 false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> N, begin;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; begin;</span><br><span class="line">    <span class="type">int</span> address;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; address;</span><br><span class="line">        cin &gt;&gt; node[address].data &gt;&gt; node[address].next;</span><br><span class="line">        node[address].address = address;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (begin != <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        node[begin].flag = <span class="literal">true</span>; <span class="comment">// 将能够连接的节点标记为 true</span></span><br><span class="line">        count++;                 <span class="comment">// 记录有效节点的个数 </span></span><br><span class="line">        begin = node[begin].next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (count == <span class="number">0</span>) <span class="comment">// 没有有效节点直接进行输出 </span></span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;0 -1&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">sort</span>(node, node + edge, cmp);                <span class="comment">// 进行排序 </span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d %05d\n&quot;</span>, count, node[<span class="number">0</span>].address); <span class="comment">// 输出有效节点的个数和起始位置 </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; count - <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[i].address, node[i].data, node[i + <span class="number">1</span>].address);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, node[i].address, node[i].data);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="1097"><a class="markdownIt-Anchor" href="#1097"></a> 1097</h4>
+<p><strong> 题目：Deduplication on a Linked List</strong></p>
+<p>Given a singly linked list L with integer keys, you are supposed to remove the nodes with duplicated absolute values of the keys. That is, for each value K, only the first node of which the value or absolute value of its key equals K will be kept. At the mean time, all the removed nodes must be kept in a separate list. For example, given L being 21→-15→-15→-7→15, you must output 21→-15→-7, and the removed list -15→15.</p>
+<p><em>Input Specification:</em></p>
+<p>Each input file contains one test case. For each case, the first line contains the address of the first node, and a positive N (≤105) which is the total number of nodes. The address of a node is a 5-digit nonnegative integer, and NULL is represented by −1.</p>
+<p>Then N lines follow, each describes a node in the format:</p>
+<p>Address Key Next</p>
+<p>where <code>Address</code> is the position of the node, <code>Key</code> is an integer of which absolute value is no more than 104, and <code>Next</code> is the position of the next node.</p>
+<p><em>Output Specification:</em></p>
+<p>For each case, output the resulting linked list first, then the removed list. Each node occupies a line, and is printed in the same format as in the input.</p>
+<p><em>Sample Input:</em></p>
+<blockquote>
+<p>00100 5<br />
+99999 -7 87654<br />
+23854 -15 00000<br />
+87654 15 -1<br />
+00000 -15 99999<br />
+00100 21 23854</p>
+</blockquote>
+<p><em>Sample Output:</em></p>
+<blockquote>
+<p>00100 21 23854<br />
+23854 -15 99999<br />
+99999 -7 -1<br />
+00000 -15 87654<br />
+87654 15 -1</p>
+</blockquote>
+<p><strong> 思路：</strong> 将数据绝对值相同的节点按照输入顺序放置到最后分别控制有效位和无效位单独输出，排序的标记变量初始置为数据规模的两倍放置中间存放无效位时溢出，输出时注意两类的最后一个节点的 next 为 -1</p>
+<p><strong> 代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">NODE</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> address, key, next, num = <span class="number">2</span> * maxn; <span class="comment">//num 让其数时数据规模的两倍，中间留出充足的空间进行分类放置 </span></span><br><span class="line">&#125; node[maxn];</span><br><span class="line"><span class="type">bool</span> exist[maxn] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp</span><span class="params">(NODE a, NODE b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.num &lt; b.num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> begin, n, cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>, a; <span class="comment">//cnt1 表示有效的，cnt2 表示被删除的 </span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;node[a].key, &amp;node[a].next);</span><br><span class="line">        node[a].address = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = begin; i != <span class="number">-1</span>; i = node[i].next) <span class="comment">// 遍历 </span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (exist[<span class="built_in">abs</span>(node[i].key)] == <span class="literal">false</span>) <span class="comment">// 如果这个数的绝对值没有出现过 </span></span><br><span class="line">        &#123;</span><br><span class="line">            exist[<span class="built_in">abs</span>(node[i].key)] = <span class="literal">true</span>; <span class="comment">// 表示出现 </span></span><br><span class="line">            node[i].num = cnt1++;           <span class="comment">// 为其赋予第几个有效位 </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            node[i].num = maxn + cnt2++; <span class="comment">// 为其赋予第几个无效位 </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(node, node + maxn, cmp);</span><br><span class="line">    <span class="type">int</span> cnt = cnt1 + cnt2;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != cnt1 - <span class="number">1</span> &amp;&amp; i != cnt - <span class="number">1</span>) <span class="comment">// 不是两类的最后一个节点 </span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[i].address, node[i].key, node[i + <span class="number">1</span>].address);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, node[i].address, node[i].key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：PAT 甲级 - 模板库</li>
+        <li>本文作者：Aidan</li>
+        <li>创建时间：2021-08-14 18:49:48</li>
+        <li>
+            本文链接：https://aidanblog.top/pat_level_a-stl/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/pat_level_a-search_and_dp/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">PAT 甲级 - 搜索和动规</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/pat_level_a-math_problem/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">PAT 甲级 - 数学问题</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'ba3b48819b578103a5dd',
+                    clientSecret: 'ae3935801875ec26564ef58a21b754a0ac3e1627',
+                    repo: 'aidan-goodman.github.io',
+                    owner: 'aidan-goodman',
+                    admin: ['aidan-goodman'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2024&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="https://aidanblog.top/about/">Aidan</a>
+        </div>
+        
+        
+    </div>
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-text"> vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1039"><span class="nav-text"> 1039</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1047"><span class="nav-text"> 1047</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-text"> set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1063"><span class="nav-text"> 1063</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string"><span class="nav-text"> string</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1060"><span class="nav-text"> 1060</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-text"> map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1100"><span class="nav-text"> 1100</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1054"><span class="nav-text"> 1054</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1071"><span class="nav-text"> 1071</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1022"><span class="nav-text"> 1022</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stack"><span class="nav-text"> stack</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1051"><span class="nav-text"> 1051</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#queue"><span class="nav-text"> queue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1056"><span class="nav-text"> 1056</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linklist"><span class="nav-text"> linklist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1074"><span class="nav-text"> 1074</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1032"><span class="nav-text"> 1032</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1052"><span class="nav-text"> 1052</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1097"><span class="nav-text"> 1097</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

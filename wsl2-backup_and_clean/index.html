@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Aidan">
+    
+    <title>
+        
+            WSL2 的备份与清理 |
+        
+        栖迟於一丘
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"aidan-goodman.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/icon.jpg","favicon":"/images/icon.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/background.jpg","description":"栖迟於一丘，则天下不易其乐"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                栖迟於一丘
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">WSL2 的备份与清理</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/icon.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Aidan</span>
+                        
+                            <span class="author-label">Engineer</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-11-04 18:24:34
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/">实用操作</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Linux/">Linux</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/WSL2/">WSL2</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+<p> 毕竟 WSL2 只是一个子系统，所以可以大胆折腾，搞坏了重置 Ubuntu 即可，但是每次弄坏了可能还要去重新配置环境，MySQL, Redis, Docker 啥乱七八糟的装一遍也很麻烦，后来发现可以使用导入导出的方式做一个快照和回滚 </p>
+<p> 其次我这种强迫症人选对磁盘清理真是谜之依赖，所以又找到了对 WSL 虚拟磁盘的压缩方式 </p>
+<span id="more"></span>
+<h2 id="wsl- 的快照和回滚"><a class="markdownIt-Anchor" href="#wsl- 的快照和回滚"></a> WSL 的快照和回滚 </h2>
+<blockquote>
+<p> 其实就是把阿里云的备份方式做一个套用，结果完全能用 </p>
+</blockquote>
+<p> 这里首先要去关闭当前运行的子系统 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PS C:\&gt;wsl --shutdown</span><br><span class="line">PS C:\&gt; wsl -l -v</span><br><span class="line">  NAME            STATE           VERSION</span><br><span class="line">* Ubuntu-20.04    Stopped         2</span><br></pre></td></tr></table></figure>
+<p> 然后直接执行导出命令即可 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --<span class="built_in">export</span> Ubuntu-20.04 c:\wsl-ubuntu20-04.tar</span><br></pre></td></tr></table></figure>
+<p> 之后系统数据会打包成一个 <code>.tar</code> 文件，然后放到 U 盘云端都可以 </p>
+<p> 如果需要回滚首先进行系统的注销，然后将 <code>.tar</code> 包进行导入 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注销当前系统 </span></span><br><span class="line">wsl --unregister Ubuntu-20.04</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进行数据的导入 </span></span><br><span class="line">wsl --import Ubuntu-20.04 c:\wsl c:\wsl-ubuntu20-04.tar --version 2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新设置默认用户名 </span></span><br><span class="line">ubuntu2004 config --default-user userName</span><br></pre></td></tr></table></figure>
+<h2 id="wsl2- 宿主机磁盘清理"><a class="markdownIt-Anchor" href="#wsl2- 宿主机磁盘清理"></a> WSL2 宿主机磁盘清理 </h2>
+<p>WSL2 使用虚拟磁盘，如果往 WSL2 中放了大量的数据，然后就删掉，会发现 WSL2 的磁盘占用并没有降下来，这时强迫症如我就需要手动去压缩磁盘 </p>
+<p> 第一步还是关闭运行状态的子系统，然后使用 <code>diskpart</code> 命令打开磁盘工具窗口，然后找到自己 WSL 版本对应的磁盘位置，例如我的 Ubuntu-20.04 是 <code>C:\Users\aidan\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\ext4.vhdx</code></p>
+<p> 执行磁盘选择命令后压缩 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择磁盘 </span></span><br><span class="line"><span class="keyword">select</span> vdisk file=<span class="string">&quot;&#123;vhdx 文件名 &#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩磁盘 </span></span><br><span class="line">compact vdisk</span><br></pre></td></tr></table></figure>
+<p> 如果执行压缩命令时报错不要慌，因为当前磁盘是一个只读的状态，只需要执行 <code>detach vdisk</code> 命令即可，然后压缩，完成后不要忘了把权限换回来： <code>attach vdisk readonly</code></p>
+<h2 id="debian- 存储清理"><a class="markdownIt-Anchor" href="#debian- 存储清理"></a> Debian 存储清理 </h2>
+<h3 id="旧内核清理"><a class="markdownIt-Anchor" href="# 旧内核清理"></a> 旧内核清理 </h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt purge $(dpkg -l <span class="string">&#x27;linux-*&#x27;</span> | awk <span class="string">&#x27;/^ii/&#123;print $2&#125;&#x27;</span> | grep -P <span class="string">&#x27;^(?!linux-(?:generic|raspi|aws)).*&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="旧软件清理"><a class="markdownIt-Anchor" href="# 旧软件清理"></a> 旧软件清理 </h3>
+<ol>
+<li> 清理旧版本的软件缓存：<code>sudo apt-get autoclean</code></li>
+<li> 清理所有软件缓存：<code>sudo apt-get clean</code></li>
+<li> 清理系统中不再使用的孤立文件：<code>sudo apt-get autoremove</code><br />
+可以使用 <code>sudo du -sh /var/cache/apt</code> 命令查看缓存大小 </li>
+<li> 清理软件的残余配置：<code>sudo apt-get autoremove -purge</code></li>
+<li> 卸载软件：<code>sudo apt --purge remove xxx</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt autoclean &amp;&amp; sudo apt clean &amp;&amp; sudo apt autoremove &amp;&amp; sudo apt remove &amp;&amp; sudo apt autoremove --purge</span><br></pre></td></tr></table></figure>
+<h3 id="删除残余配置文件"><a class="markdownIt-Anchor" href="# 删除残余配置文件"></a> 删除残余配置文件 </h3>
+<p><code>remove</code> 但没有 <code>purge</code> 的软件会残留一部分配置文件，这里做一个清除操作 </p>
+<ol>
+<li> 找出系统上哪些软件包留下了残余的配置文件：<code>dpkg --list | grep &quot;^rc&quot;</code></li>
+<li> 提取软件名：<code>dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3</code></li>
+<li> 删除软件包：<code>dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 | xargs sudo dpkg --purge</code></li>
+</ol>
+<h3 id="清除无用依赖包"><a class="markdownIt-Anchor" href="# 清除无用依赖包"></a> 清除无用依赖包 </h3>
+<ol>
+<li> 安装查看工具 <code>deborphan</code>，执行软件名列出所有无用依赖：<code>sudo apt install deborphan</code></li>
+<li> 删除软件：<code>deborphan | xargs sudo apt purge -y</code></li>
+</ol>
+<h3 id="清楚过时软件"><a class="markdownIt-Anchor" href="# 清楚过时软件"></a> 清楚过时软件 </h3>
+<p> 所谓过时（obsolete）的软件包是指 /etc/apt/sources.list 源文件中没有任何一个软件源提供这个软件的 deb 安装包 <br />
+也就是说这个软件包在软件源里找不到了，不被支持了．这可能是因为下面几个原因：</p>
+<ul>
+<li> 上游开发者不维护这个软件，又没有人来接管这个软件的开发．所以 Debian/Ubuntu 的软件包维护人员决定将这个软件从软件源中删除 </li>
+<li> 这个软件成了孤儿，同时用户很少．所以它就从软件源里消失了 </li>
+<li> 这个软件有了一个新的名字，维护人员给它起了一个新的名字并保留旧软件包 </li>
+</ul>
+<ol>
+<li> 查找所有过时软件：<code>sudo aptitude search ?obsolete</code></li>
+<li> 可以手动删除，也可以清除所有：<code>sudo aptitude purge ~o</code></li>
+</ol>
+<h3 id="清理日志文件"><a class="markdownIt-Anchor" href="# 清理日志文件"></a> 清理日志文件 </h3>
+<p>ncdu 工具可以查看文件大小 </p>
+<ol>
+<li> 安装后执行：<code>sudo ncdu /var/log</code></li>
+<li> 删除可以使用：<code>sudo dd if=/dev/null of=/var/log/xxx.log</code></li>
+</ol>
+<h3 id="查看大软件"><a class="markdownIt-Anchor" href="# 查看大软件"></a> 查看大软件 </h3>
+<p>debian-goodies 工具可以查看软件大小，可以执行 <code>dpigs -H</code> 查看大容量软件，默认展示前十条结果，可以指定展示行数 <code>dpigs -H --lines=20</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.1GiB elasticsearch</span><br><span class="line">315MiB golang-1.18-go</span><br><span class="line">228MiB openjdk-17-jdk-headless</span><br><span class="line">183MiB openjdk-17-jre-headless</span><br><span class="line">140MiB docker.io</span><br><span class="line">105MiB libllvm14</span><br><span class="line">102MiB golang-1.18-src</span><br><span class="line">96MiB containerd</span><br><span class="line">67MiB gcc-12</span><br><span class="line">52MiB guile-3.0-libs</span><br><span class="line">.............</span><br></pre></td></tr></table></figure>
+<hr />
+<blockquote>
+<p> 参考文章：<br />
+<a class="link"   target="_blank" rel="noopener" href="https://www.linuxdashen.com/debianubuntu%E6%B8%85%E7%90%86%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4%E7%9A%848%E4%B8%AA%E6%8A%80%E5%B7%A7">https://www.linuxdashen.com/debianubuntu 清理硬盘空间的 8 个技巧 <i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：WSL2 的备份与清理</li>
+        <li>本文作者：Aidan</li>
+        <li>创建时间：2021-11-04 18:24:34</li>
+        <li>
+            本文链接：https://aidanblog.top/wsl2-backup_and_clean/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/native_code-overrid_and_equals/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java 怎么重写 Hash 和 equals</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/school_interview-exam/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">校招后端面试算法题 —— Java 实现</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'ba3b48819b578103a5dd',
+                    clientSecret: 'ae3935801875ec26564ef58a21b754a0ac3e1627',
+                    repo: 'aidan-goodman.github.io',
+                    owner: 'aidan-goodman',
+                    admin: ['aidan-goodman'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2024&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="https://aidanblog.top/about/">Aidan</a>
+        </div>
+        
+        
+    </div>
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wsl-%20%E7%9A%84%E5%BF%AB%E7%85%A7%E5%92%8C%E5%9B%9E%E6%BB%9A"><span class="nav-text"> WSL 的快照和回滚 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wsl2-%20%E5%AE%BF%E4%B8%BB%E6%9C%BA%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86"><span class="nav-text"> WSL2 宿主机磁盘清理 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#debian-%20%E5%AD%98%E5%82%A8%E6%B8%85%E7%90%86"><span class="nav-text"> Debian 存储清理 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A7%E5%86%85%E6%A0%B8%E6%B8%85%E7%90%86"><span class="nav-text"> 旧内核清理 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A7%E8%BD%AF%E4%BB%B6%E6%B8%85%E7%90%86"><span class="nav-text"> 旧软件清理 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%AE%8B%E4%BD%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text"> 删除残余配置文件 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%97%A0%E7%94%A8%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="nav-text"> 清除无用依赖包 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E6%A5%9A%E8%BF%87%E6%97%B6%E8%BD%AF%E4%BB%B6"><span class="nav-text"> 清楚过时软件 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6"><span class="nav-text"> 清理日志文件 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%A4%A7%E8%BD%AF%E4%BB%B6"><span class="nav-text"> 查看大软件 </span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
